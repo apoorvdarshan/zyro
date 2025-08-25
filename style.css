@@ -206,6 +206,77 @@ main {
     display: none;
 }
 
+.contact-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
+
+.contact-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-icons a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons a[href*="github"]:hover {
+    background: #333;
+}
+
+.social-icons a[href*="linkedin"]:hover {
+    background: #0077b5;
+}
+
+.social-icons a[href*="youtube"]:hover {
+    background: #ff0000;
+}
+
+.social-icons a[href*="instagram"]:hover {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+.social-icons a[href*="twitter"]:hover {
+    background: #000000;
+}
+
+.x-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.social-icons a[href*="mailto"]:hover {
+    background: #ea4335;
+}
+
 footer {
     background: #333;
     color: white;
@@ -240,5 +311,24 @@ footer {
     .news-grid {
         grid-template-columns: 1fr;
         gap: 15px;
+    }
+    
+    .contact-section {
+        padding: 2rem 0;
+    }
+    
+    .contact-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .social-icons {
+        gap: 15px;
+    }
+    
+    .social-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
     }
 }
