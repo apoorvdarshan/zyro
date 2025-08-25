@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI News Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI News Hub</h1>
+            <p>Stay updated with the latest news powered by AI</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for news...">
+                <button id="searchBtn">Search</button>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <h2>Categories</h2>
+            <div class="categories">
+                <button class="category-btn active" data-category="general">General</button>
+                <button class="category-btn" data-category="world">World</button>
+                <button class="category-btn" data-category="business">Business</button>
+                <button class="category-btn" data-category="technology">Technology</button>
+                <button class="category-btn" data-category="entertainment">Entertainment</button>
+                <button class="category-btn" data-category="sports">Sports</button>
+                <button class="category-btn" data-category="science">Science</button>
+                <button class="category-btn" data-category="health">Health</button>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div id="loading" class="loading hidden">Loading news...</div>
+            <div id="error" class="error hidden"></div>
+            <div id="newsContainer" class="news-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AI News Hub. Powered by GNews API</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
