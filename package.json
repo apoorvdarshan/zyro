@@ -1,7 +1,7 @@
 {
-  "name": "ai-news-hub",
+  "name": "zyro-news",
   "version": "1.0.0",
-  "description": "AI-powered news website using GNews API",
+  "description": "Modern news website - zyro.news",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

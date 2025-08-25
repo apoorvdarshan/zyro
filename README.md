@@ -1,4 +1,4 @@
-# AI News Hub
+# zyro.news
 
 A modern, responsive news website powered by the GNews API. Features real-time news search and category-based browsing with a clean, professional interface.
 
@@ -25,8 +25,8 @@ A modern, responsive news website powered by the GNews API. Features real-time n
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/ai-news-hub.git
-cd ai-news-hub
+git clone https://github.com/yourusername/zyro-news.git
+cd zyro-news
 ```
 
 2. **Install dependencies**
