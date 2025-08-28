@@ -285,6 +285,76 @@ footer {
     margin-top: 3rem;
 }
 
+.footer-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    line-height: 1.6;
+}
+
+.policy-content h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+.policy-content h3 {
+    color: #667eea;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+.policy-content h4 {
+    color: #555;
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.policy-content section {
+    margin-bottom: 2rem;
+}
+
+.policy-content ul {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.policy-content li {
+    margin-bottom: 0.5rem;
+}
+
+.policy-content a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.policy-content a:hover {
+    text-decoration: underline;
+}
+
+.policy-content p {
+    margin-bottom: 1rem;
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -330,5 +400,18 @@ footer {
         width: 45px;
         height: 45px;
         font-size: 1.1rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .policy-content {
+        padding: 1rem;
+    }
+    
+    .policy-content h2 {
+        font-size: 1.5rem;
     }
 }
