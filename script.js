@@ -219,7 +219,6 @@ class FuturisticNewsApp {
 
         articles.forEach((article, index) => {
             const newsCard = this.createAdvancedNewsCard(article);
-            newsCard.style.animationDelay = `${index * 0.1}s`;
             newsContainer.appendChild(newsCard);
             
             // Observe for scroll animations
