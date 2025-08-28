@@ -3,140 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>zyro.news</title>
+    <title>zyro.news - Future of Digital Journalism</title>
+    <meta name="description" content="Stay informed with the latest global news from zyro.news - Your premier source for breaking news, technology, politics, and more." />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-BRHGCB1LN9"
-    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRHGCB1LN9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-BRHGCB1LN9");
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BRHGCB1LN9');
     </script>
-    <!--adsense code-->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1910432677832151"
-      crossorigin="anonymous"
-    ></script>
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1910432677832151" crossorigin="anonymous"></script>
   </head>
+  
   <body>
+    <!-- Modern Header -->
     <header>
       <div class="container">
-        <h1>zyro.news</h1>
-        <p>Stay updated with the latest news powered by AI</p>
+        <div class="header-content">
+          <div class="logo">
+            <h1><a href="/" style="color: inherit; text-decoration: none;">zyro.news</a></h1>
+          </div>
+          <nav class="header-nav">
+            <div class="nav-time" id="currentTime"></div>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="container">
-      <section class="search-section">
-        <div class="search-container">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search for news..."
-          />
-          <button id="searchBtn">Search</button>
-        </div>
-      </section>
-
-      <section class="categories-section">
-        <h2>Categories</h2>
-        <div class="categories">
-          <button class="category-btn active" data-category="general">
-            General
-          </button>
-          <button class="category-btn" data-category="world">World</button>
-          <button class="category-btn" data-category="business">
-            Business
-          </button>
-          <button class="category-btn" data-category="technology">
-            Technology
-          </button>
-          <button class="category-btn" data-category="entertainment">
-            Entertainment
-          </button>
-          <button class="category-btn" data-category="sports">Sports</button>
-          <button class="category-btn" data-category="science">Science</button>
-          <button class="category-btn" data-category="health">Health</button>
-        </div>
-      </section>
-
-      <section class="news-section">
-        <div id="loading" class="loading hidden">Loading news...</div>
-        <div id="error" class="error hidden"></div>
-        <div id="newsContainer" class="news-grid"></div>
-      </section>
-    </main>
-
-    <section class="contact-section">
+    <!-- Hero Section -->
+    <section class="hero-section">
       <div class="container">
-        <h3>Connect with Us</h3>
-        <div class="social-icons">
-          <a
-            href="https://github.com/apoorvdarshan"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://linkedin.com/in/apoorvdarshan"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://youtube.com/@apoorvdarshan"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="YouTube"
-          >
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a
-            href="https://instagram.com/apoorvdarshan"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://twitter.com/apoorvdarshan"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="X (Twitter)"
-          >
-            <span class="x-icon">𝕏</span>
-          </a>
-          <a href="mailto:ad13dtu@gmail.com" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
+        <div class="hero-content">
+          <h1>The Future of News</h1>
+          <p>Real-time global journalism powered by advanced technology and human insight</p>
         </div>
       </div>
     </section>
 
+    <!-- Advanced Search -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-container">
+          <div class="search-wrapper">
+            <div class="search-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <input type="text" id="searchInput" placeholder="Search breaking news, topics, or keywords..." />
+            <button id="searchBtn">Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Tiles -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">News Categories</h2>
+          <p class="section-subtitle">Explore news by topic</p>
+        </div>
+        <div class="categories-grid">
+          <div class="category-tile active" data-category="general">
+            <div class="category-icon"><i class="fas fa-newspaper"></i></div>
+            <div class="category-name">General</div>
+          </div>
+          <div class="category-tile" data-category="world">
+            <div class="category-icon"><i class="fas fa-globe-americas"></i></div>
+            <div class="category-name">World</div>
+          </div>
+          <div class="category-tile" data-category="business">
+            <div class="category-icon"><i class="fas fa-briefcase"></i></div>
+            <div class="category-name">Business</div>
+          </div>
+          <div class="category-tile" data-category="technology">
+            <div class="category-icon"><i class="fas fa-microchip"></i></div>
+            <div class="category-name">Technology</div>
+          </div>
+          <div class="category-tile" data-category="entertainment">
+            <div class="category-icon"><i class="fas fa-film"></i></div>
+            <div class="category-name">Entertainment</div>
+          </div>
+          <div class="category-tile" data-category="sports">
+            <div class="category-icon"><i class="fas fa-futbol"></i></div>
+            <div class="category-name">Sports</div>
+          </div>
+          <div class="category-tile" data-category="science">
+            <div class="category-icon"><i class="fas fa-flask"></i></div>
+            <div class="category-name">Science</div>
+          </div>
+          <div class="category-tile" data-category="health">
+            <div class="category-icon"><i class="fas fa-heartbeat"></i></div>
+            <div class="category-name">Health</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Latest Headlines</h2>
+          <p class="section-subtitle">Stay informed with breaking news from around the globe</p>
+        </div>
+        
+        <!-- Loading State -->
+        <div id="loading" class="loading hidden">
+          <div class="loading-spinner"></div>
+          <span>Loading latest news...</span>
+        </div>
+        
+        <!-- Error State -->
+        <div id="error" class="error hidden"></div>
+        
+        <!-- News Grid -->
+        <div id="newsContainer" class="news-grid"></div>
+      </div>
+    </section>
+
+    <!-- Premium Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-content">
+          <h2 class="contact-title">Connect With Us</h2>
+          <p class="contact-subtitle">Stay connected with zyro.news across all platforms</p>
+          
+          <div class="social-grid">
+            <a href="https://github.com/apoorvdarshan" class="social-link" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github social-icon"></i>
+              <span class="social-label">GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/apoorvdarshan" class="social-link" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin social-icon"></i>
+              <span class="social-label">LinkedIn</span>
+            </a>
+            <a href="https://youtube.com/@apoorvdarshan" class="social-link" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-youtube social-icon"></i>
+              <span class="social-label">YouTube</span>
+            </a>
+            <a href="https://instagram.com/apoorvdarshan" class="social-link" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram social-icon"></i>
+              <span class="social-label">Instagram</span>
+            </a>
+            <a href="https://twitter.com/apoorvdarshan" class="social-link" target="_blank" rel="noopener noreferrer">
+              <span class="social-icon">𝕏</span>
+              <span class="social-label">Twitter</span>
+            </a>
+            <a href="mailto:ad13dtu@gmail.com" class="social-link">
+              <i class="fas fa-envelope social-icon"></i>
+              <span class="social-label">Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Premium Footer -->
     <footer>
       <div class="container">
-        <p>&copy; 2025 zyro.news</p>
-        <div class="footer-links">
-          <a href="/terms.html">Terms</a>
-          <a href="/privacy.html">Privacy</a>
-          <a href="/cookies.html">Cookies</a>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>News</h4>
+            <div class="footer-links">
+              <a href="#general">Breaking News</a>
+              <a href="#world">World News</a>
+              <a href="#politics">Politics</a>
+              <a href="#business">Business</a>
+              <a href="#technology">Technology</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Sections</h4>
+            <div class="footer-links">
+              <a href="#sports">Sports</a>
+              <a href="#entertainment">Entertainment</a>
+              <a href="#science">Science</a>
+              <a href="#health">Health</a>
+              <a href="#opinion">Opinion</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>About</h4>
+            <div class="footer-links">
+              <a href="/about">About Us</a>
+              <a href="/careers">Careers</a>
+              <a href="/contact">Contact</a>
+              <a href="/press">Press</a>
+              <a href="/advertise">Advertise</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Get the latest news delivered to your inbox</p>
+            <div class="newsletter">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <a href="/terms.html">Terms of Service</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/cookies.html">Cookie Policy</a>
+            <a href="/sitemap">Sitemap</a>
+          </div>
+          <div class="copyright">
+            © 2025 zyro.news. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
