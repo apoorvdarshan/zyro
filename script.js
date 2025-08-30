@@ -40,12 +40,25 @@ class FuturisticNewsApp {
     setupTimeDisplay() {
         const updateTime = () => {
             const now = new Date();
-            const timeString = now.toLocaleTimeString('en-US', { 
-                hour12: false,
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
+            
+            // Multiple time zones
+            const timeZones = [
+                { label: 'NYC', zone: 'America/New_York' },
+                { label: 'LON', zone: 'Europe/London' },
+                { label: 'TYO', zone: 'Asia/Tokyo' },
+                { label: 'SYD', zone: 'Australia/Sydney' }
+            ];
+            
+            const times = timeZones.map(tz => {
+                const time = now.toLocaleTimeString('en-US', {
+                    timeZone: tz.zone,
+                    hour12: false,
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+                return `${tz.label} ${time}`;
             });
+            
             const dateString = now.toLocaleDateString('en-US', {
                 weekday: 'short',
                 month: 'short',
@@ -54,7 +67,7 @@ class FuturisticNewsApp {
             
             const timeElement = document.getElementById('currentTime');
             if (timeElement) {
-                timeElement.textContent = `${dateString} ${timeString}`;
+                timeElement.textContent = `${dateString} | ${times.join(' | ')}`;
             }
         };
 
