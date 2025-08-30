@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - zyro.news</title>
+    <meta name="description" content="Learn about zyro.news - Your premier source for global news and digital journalism.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="/" style="color: inherit; text-decoration: none;">zyro.news</a></h1>
+                </div>
+                <nav class="header-nav">
+                    <div class="nav-time" id="currentTime"></div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="padding: 4rem 2rem; max-width: 800px;">
+        <div style="background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius-large); padding: 3rem; margin-top: 2rem;">
+            <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 2rem; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">About Us</h1>
+            
+            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
+                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">Welcome to zyro.news</h2>
+                <p style="margin-bottom: 1.5rem;">
+                    zyro.news represents the future of digital journalism, where cutting-edge technology meets human insight to deliver the most relevant and timely news from around the globe. We are committed to providing our readers with accurate, unbiased, and comprehensive coverage of the stories that matter most.
+                </p>
+
+                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">Our Mission</h2>
+                <p style="margin-bottom: 1.5rem;">
+                    To democratize access to quality journalism by leveraging advanced technology and data-driven insights. We believe that everyone deserves access to reliable news that helps them make informed decisions about their world.
+                </p>
+
+                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">What Makes Us Different</h2>
+                <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;">Real-time global news aggregation from trusted sources</li>
+                    <li style="margin-bottom: 0.5rem;">Advanced filtering and categorization technology</li>
+                    <li style="margin-bottom: 0.5rem;">Clean, modern interface designed for optimal reading experience</li>
+                    <li style="margin-bottom: 0.5rem;">Mobile-first approach ensuring accessibility across all devices</li>
+                    <li style="margin-bottom: 0.5rem;">Commitment to journalistic integrity and fact-based reporting</li>
+                </ul>
+
+                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">Our Vision</h2>
+                <p style="margin-bottom: 1.5rem;">
+                    We envision a world where quality journalism is accessible to everyone, where technology enhances rather than replaces human judgment, and where readers can trust that the news they consume is accurate, relevant, and presented without bias.
+                </p>
+
+                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
+                    <a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--gradient-accent); color: white; text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>News</h4>
+                    <div class="footer-links">
+                        <a href="#general">Breaking News</a>
+                        <a href="#world">World News</a>
+                        <a href="#politics">Politics</a>
+                        <a href="#business">Business</a>
+                        <a href="#technology">Technology</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Sections</h4>
+                    <div class="footer-links">
+                        <a href="#sports">Sports</a>
+                        <a href="#entertainment">Entertainment</a>
+                        <a href="#science">Science</a>
+                        <a href="#health">Health</a>
+                        <a href="#opinion">Opinion</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <div class="footer-links">
+                        <a href="about.html">About Us</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="advertise.html">Advertise with us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Get the latest news delivered to your inbox</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter your email" />
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                </div>
+                <div class="copyright">
+                    © 2025 zyro.news. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple time display for header
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            const dateString = now.toLocaleDateString('en-US', {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric'
+            });
+            document.getElementById('currentTime').textContent = `${dateString} ${timeString}`;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

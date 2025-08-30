@@ -29,6 +29,12 @@ class FuturisticNewsApp {
         categoryTiles.forEach(tile => {
             tile.addEventListener('click', (e) => this.handleCategoryClick(e));
         });
+
+        // Add footer navigation event listeners
+        const footerLinks = document.querySelectorAll('.footer-links a[href^="#"]');
+        footerLinks.forEach(link => {
+            link.addEventListener('click', (e) => this.handleFooterCategoryClick(e));
+        });
     }
 
     setupTimeDisplay() {
@@ -182,6 +188,42 @@ class FuturisticNewsApp {
         this.updateSectionTitle(`${categoryName} News`);
         
         this.loadTopHeadlines();
+    }
+
+    handleFooterCategoryClick(e) {
+        e.preventDefault();
+        
+        const link = e.currentTarget;
+        const category = link.getAttribute('href').substring(1); // Remove the #
+        
+        this.currentCategory = category;
+        this.currentQuery = '';
+        
+        // Update active state for category tiles
+        document.querySelectorAll('.category-tile').forEach(tile => {
+            tile.classList.remove('active');
+            if (tile.dataset.category === category) {
+                tile.classList.add('active');
+            }
+        });
+
+        // Clear search input
+        document.getElementById('searchInput').value = '';
+        
+        // Update section title
+        const categoryName = link.textContent;
+        this.updateSectionTitle(categoryName);
+        
+        // Load category news
+        this.loadTopHeadlines();
+        
+        // Auto-scroll to results section
+        setTimeout(() => {
+            document.querySelector('.news-section').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }, 100);
     }
 
     async loadTopHeadlines() {
