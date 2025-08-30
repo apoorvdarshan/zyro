@@ -144,6 +144,14 @@ class FuturisticNewsApp {
             if (response.ok) {
                 this.displayNews(data.articles);
                 this.updateSectionTitle(`Search Results for "${query}"`);
+                
+                // Auto-scroll to results section
+                setTimeout(() => {
+                    document.querySelector('.news-section').scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }, 100);
             } else {
                 this.showError(data.errors ? data.errors.join(', ') : 'Search failed');
             }
