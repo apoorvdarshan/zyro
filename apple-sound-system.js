@@ -91,6 +91,9 @@ class AppleSoundSystem {
         
         // Universal clickable element detection
         setTimeout(() => this.addUniversalClickSounds(), 1000);
+        
+        // Add scroll to news functionality for category tiles
+        this.setupCategoryScrolling();
     }
 
     addUniversalClickSounds() {
@@ -117,6 +120,33 @@ class AppleSoundSystem {
                 this.addSoundToElement(element, this.soundTypes.brainWave);
             }
         });
+    }
+
+    setupCategoryScrolling() {
+        const categoryTiles = document.querySelectorAll('.category-tile');
+        const newsContainer = document.getElementById('newsContainer') || document.querySelector('.news-section') || document.querySelector('.news-grid');
+        
+        if (!newsContainer) {
+            console.warn('News container not found for category scrolling');
+            return;
+        }
+
+        categoryTiles.forEach(tile => {
+            tile.addEventListener('click', (e) => {
+                // Small delay to allow for any category switching logic
+                setTimeout(() => {
+                    newsContainer.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start',
+                        inline: 'nearest'
+                    });
+                }, 300);
+                
+                console.log('📜 Scrolling to news container');
+            });
+        });
+        
+        console.log(`📜 Set up category scrolling for ${categoryTiles.length} tiles`);
     }
 
     addSoundToElement(element, soundType) {

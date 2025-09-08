@@ -937,7 +937,6 @@ header.scrolled::before {
   border: var(--border-glass);
   border-radius: var(--radius-2xl);
   overflow: hidden;
-  transition: var(--transition-spring);
   position: relative;
   cursor: pointer;
   height: fit-content;
@@ -1761,7 +1760,7 @@ footer::before {
 
 /* Advanced Scroll Animations */
 .animate-in {
-  animation: slideInUp 0.8s ease-out forwards;
+  /* Animation disabled */
 }
 
 .animate-fade {
@@ -1844,24 +1843,7 @@ footer::before {
   animation-delay: 0.8s;
 }
 
-.news-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.news-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.news-card:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.news-card:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.news-card:nth-child(5) {
-  animation-delay: 0.5s;
-}
-.news-card:nth-child(6) {
-  animation-delay: 0.6s;
-}
+/* Animation delays removed */
 
 .social-link:nth-child(1) {
   animation-delay: 0.1s;
@@ -5615,12 +5597,11 @@ footer::before {
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* No transitions or animations */
 }
 
 .news-card:hover,
 .card:hover {
-    transform: translateY(-4px) scale(1.02);
     background: linear-gradient(135deg, 
         var(--ios-glass-accent) 0%, 
         var(--ios-glass-primary) 100%);
