@@ -94,6 +94,9 @@ class AppleSoundSystem {
         
         // Add scroll to news functionality for category tiles
         this.setupCategoryScrolling();
+        
+        // Make news cards clickable like links
+        this.setupNewsCardLinks();
     }
 
     addUniversalClickSounds() {
@@ -147,6 +150,41 @@ class AppleSoundSystem {
         });
         
         console.log(`📜 Set up category scrolling for ${categoryTiles.length} tiles`);
+    }
+
+    setupNewsCardLinks() {
+        // Use event delegation to handle dynamically loaded news cards
+        document.addEventListener('click', (e) => {
+            const newsCard = e.target.closest('.news-card, .card');
+            if (!newsCard) return;
+
+            // Don't interfere if clicking on an existing link
+            if (e.target.closest('a')) return;
+
+            // Find the article URL
+            let articleUrl = '';
+            
+            // Check for data-url attribute on the card
+            if (newsCard.hasAttribute('data-url')) {
+                articleUrl = newsCard.getAttribute('data-url');
+            }
+            
+            // If no data-url, look for the first link inside the card
+            if (!articleUrl) {
+                const link = newsCard.querySelector('a[href]');
+                if (link && link.href && link.href !== '#' && !link.href.includes('javascript:')) {
+                    articleUrl = link.href;
+                }
+            }
+            
+            // Open the URL if found
+            if (articleUrl) {
+                window.open(articleUrl, '_blank');
+                console.log('🔗 Opening news article:', articleUrl);
+            }
+        });
+
+        console.log('🔗 News card link functionality initialized');
     }
 
     addSoundToElement(element, soundType) {
