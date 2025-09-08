@@ -5469,4 +5469,108 @@ footer::before {
 
 /* End of Apple Liquid Morphing Interface System */
 
+/* =================================================================
+   APPLE BRAIN-WAVE SOUND SYSTEM & AUDIO INTEGRATION
+   ================================================================= */
+
+/* Sound-reactive visual feedback classes */
+.sound-active {
+    animation: sound-pulse 0.3s ease-out;
+}
+
+.sound-bubble {
+    animation: sound-bubble-pop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sound-ripple {
+    animation: sound-ripple-effect 0.6s ease-out;
+}
+
+.sound-wave {
+    animation: sound-brain-wave 0.8s ease-in-out;
+}
+
+@keyframes sound-pulse {
+    0% { 
+        transform: scale(1); 
+        filter: brightness(100%); 
+    }
+    50% { 
+        transform: scale(1.05); 
+        filter: brightness(120%); 
+    }
+    100% { 
+        transform: scale(1); 
+        filter: brightness(100%); 
+    }
+}
+
+@keyframes sound-bubble-pop {
+    0% { 
+        transform: scale(1) rotate(0deg); 
+        filter: hue-rotate(0deg); 
+    }
+    30% { 
+        transform: scale(1.15) rotate(5deg); 
+        filter: hue-rotate(90deg); 
+    }
+    60% { 
+        transform: scale(0.95) rotate(-3deg); 
+        filter: hue-rotate(180deg); 
+    }
+    100% { 
+        transform: scale(1) rotate(0deg); 
+        filter: hue-rotate(0deg); 
+    }
+}
+
+@keyframes sound-ripple-effect {
+    0% { 
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); 
+    }
+    50% { 
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1); 
+    }
+    100% { 
+        box-shadow: 0 0 0 40px rgba(255, 255, 255, 0); 
+    }
+}
+
+@keyframes sound-brain-wave {
+    0%, 100% { 
+        filter: hue-rotate(0deg) saturate(100%); 
+        transform: scale(1); 
+    }
+    25% { 
+        filter: hue-rotate(90deg) saturate(150%); 
+        transform: scale(1.03); 
+    }
+    50% { 
+        filter: hue-rotate(180deg) saturate(200%); 
+        transform: scale(1.06); 
+    }
+    75% { 
+        filter: hue-rotate(270deg) saturate(150%); 
+        transform: scale(1.03); 
+    }
+}
+
+/* Enhanced clickable elements with sound integration */
+.apple-sound-btn,
+.apple-liquid-btn,
+.apple-liquid-nav-item,
+.apple-liquid-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.apple-sound-btn:hover,
+.apple-liquid-btn:hover,
+.apple-liquid-nav-item:hover,
+.apple-liquid-card:hover {
+    filter: brightness(110%) saturate(120%);
+}
+
+/* End of Apple Brain-Wave Sound System */
+
 /* End of Ultra Advanced Glassmorphism CSS System */
