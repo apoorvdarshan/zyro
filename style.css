@@ -5909,4 +5909,83 @@ footer::before {
 
 /* End of Apple Control Center Glassmorphism Enhancements */
 
+/* =================================================================
+   MOBILE RESPONSIVE FIXES
+   ================================================================= */
+
+@media (max-width: 768px) {
+    /* Fix search bar icon overlap on mobile */
+    .search-wrapper {
+        padding: 6px;
+    }
+    
+    .search-icon {
+        left: 16px;
+        font-size: 1rem;
+    }
+    
+    #searchInput {
+        padding: 14px 16px 14px 46px;
+        width: calc(100% - 100px);
+        font-size: 0.9rem;
+    }
+    
+    #searchBtn {
+        padding: 0 20px;
+        font-size: 0.85rem;
+        right: 6px;
+        top: 6px;
+        bottom: 6px;
+        width: auto;
+        min-width: auto;
+    }
+    
+    /* Category tiles mobile spacing */
+    .categories-grid {
+        gap: 12px;
+    }
+    
+    .category-tile {
+        padding: 16px;
+    }
+    
+    /* Social links mobile layout */
+    .social-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 12px;
+    }
+    
+    .social-link {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    .search-wrapper {
+        padding: 4px;
+    }
+    
+    .search-icon {
+        left: 14px;
+        font-size: 0.9rem;
+    }
+    
+    #searchInput {
+        padding: 12px 14px 12px 42px;
+        width: calc(100% - 85px);
+        font-size: 0.85rem;
+    }
+    
+    #searchBtn {
+        padding: 0 12px;
+        font-size: 0.8rem;
+        right: 4px;
+        top: 4px;
+        bottom: 4px;
+    }
+}
+
+/* End of Mobile Responsive Fixes */
+
 /* End of Ultra Advanced Glassmorphism CSS System */
