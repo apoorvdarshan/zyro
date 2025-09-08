@@ -5573,4 +5573,359 @@ footer::before {
 
 /* End of Apple Brain-Wave Sound System */
 
+/* =================================================================
+   APPLE CONTROL CENTER GLASSMORPHISM ENHANCEMENTS
+   ================================================================= */
+
+/* iOS Control Center Glass Variables */
+:root {
+    /* Control Center Glass Colors */
+    --ios-glass-primary: rgba(255, 255, 255, 0.15);
+    --ios-glass-secondary: rgba(255, 255, 255, 0.08);
+    --ios-glass-accent: rgba(255, 255, 255, 0.25);
+    --ios-glass-border: rgba(255, 255, 255, 0.18);
+    --ios-glass-shadow: rgba(0, 0, 0, 0.1);
+    
+    /* Control Center Blur Values */
+    --ios-blur-light: blur(25px);
+    --ios-blur-medium: blur(40px);
+    --ios-blur-heavy: blur(60px);
+    
+    /* Control Center Sizing */
+    --ios-radius-small: 18px;
+    --ios-radius-medium: 22px;
+    --ios-radius-large: 28px;
+}
+
+/* Enhanced News Cards - iOS Control Center Style */
+.news-card,
+.card {
+    background: linear-gradient(135deg, 
+        var(--ios-glass-primary) 0%, 
+        var(--ios-glass-secondary) 100%);
+    backdrop-filter: var(--ios-blur-medium) saturate(180%) brightness(110%);
+    -webkit-backdrop-filter: var(--ios-blur-medium) saturate(180%) brightness(110%);
+    border: 1px solid var(--ios-glass-border);
+    border-radius: var(--ios-radius-large);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 
+        0 8px 32px var(--ios-glass-shadow),
+        0 2px 8px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.news-card:hover,
+.card:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: linear-gradient(135deg, 
+        var(--ios-glass-accent) 0%, 
+        var(--ios-glass-primary) 100%);
+    box-shadow: 
+        0 16px 48px var(--ios-glass-shadow),
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* News Card Content Styling */
+.news-card h3,
+.card h3 {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.news-card p,
+.card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.news-card .meta,
+.card .meta {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Enhanced Category Tiles - iOS Control Center Style */
+.category-tile {
+    background: linear-gradient(135deg, 
+        var(--ios-glass-primary) 0%, 
+        var(--ios-glass-secondary) 100%);
+    backdrop-filter: var(--ios-blur-light) saturate(160%) brightness(105%);
+    -webkit-backdrop-filter: var(--ios-blur-light) saturate(160%) brightness(105%);
+    border: 1px solid var(--ios-glass-border);
+    border-radius: var(--ios-radius-medium);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 6px 24px rgba(0, 0, 0, 0.08),
+        0 1px 4px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.category-tile:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(135deg, 
+        var(--ios-glass-accent) 0%, 
+        var(--ios-glass-primary) 100%);
+    box-shadow: 
+        0 12px 36px rgba(0, 0, 0, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.category-tile.active {
+    background: linear-gradient(135deg, 
+        rgba(0, 122, 255, 0.3) 0%, 
+        rgba(0, 122, 255, 0.15) 100%);
+    border-color: rgba(0, 122, 255, 0.4);
+    box-shadow: 
+        0 8px 28px rgba(0, 122, 255, 0.2),
+        0 2px 6px rgba(0, 122, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.category-icon {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.category-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Search Bar - iOS Control Center Style */
+.search-container {
+    margin-bottom: 40px;
+}
+
+.search-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, 
+        var(--ios-glass-primary) 0%, 
+        var(--ios-glass-secondary) 100%);
+    backdrop-filter: var(--ios-blur-medium) saturate(180%) brightness(110%);
+    -webkit-backdrop-filter: var(--ios-blur-medium) saturate(180%) brightness(110%);
+    border: 1px solid var(--ios-glass-border);
+    border-radius: var(--ios-radius-large);
+    padding: 4px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.search-wrapper:focus-within {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, 
+        var(--ios-glass-accent) 0%, 
+        var(--ios-glass-primary) 100%);
+    box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    z-index: 2;
+}
+
+#searchInput {
+    width: calc(100% - 120px);
+    background: transparent;
+    border: none;
+    padding: 16px 20px 16px 50px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
+    outline: none;
+    border-radius: var(--ios-radius-medium);
+}
+
+#searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#searchBtn {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+    background: linear-gradient(135deg, 
+        rgba(0, 122, 255, 0.8) 0%, 
+        rgba(0, 122, 255, 0.6) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(0, 122, 255, 0.4);
+    border-radius: calc(var(--ios-radius-medium) - 2px);
+    padding: 0 24px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 4px 16px rgba(0, 122, 255, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+#searchBtn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, 
+        rgba(0, 122, 255, 1) 0%, 
+        rgba(0, 122, 255, 0.8) 100%);
+    box-shadow: 
+        0 8px 24px rgba(0, 122, 255, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+#searchBtn:active {
+    transform: scale(0.98);
+}
+
+/* Enhanced Social Links - iOS Control Center Style */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-link {
+    background: linear-gradient(135deg, 
+        var(--ios-glass-primary) 0%, 
+        var(--ios-glass-secondary) 100%);
+    backdrop-filter: var(--ios-blur-light) saturate(160%) brightness(105%);
+    -webkit-backdrop-filter: var(--ios-blur-light) saturate(160%) brightness(105%);
+    border: 1px solid var(--ios-glass-border);
+    border-radius: var(--ios-radius-medium);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 6px 24px rgba(0, 0, 0, 0.08),
+        0 1px 4px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.social-link:hover {
+    transform: translateY(-4px) scale(1.05);
+    background: linear-gradient(135deg, 
+        var(--ios-glass-accent) 0%, 
+        var(--ios-glass-primary) 100%);
+    box-shadow: 
+        0 12px 36px rgba(0, 0, 0, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 1);
+}
+
+.social-icon {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    display: block;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.social-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Newsletter Enhancement */
+.newsletter {
+    display: flex;
+    gap: 8px;
+    background: linear-gradient(135deg, 
+        var(--ios-glass-primary) 0%, 
+        var(--ios-glass-secondary) 100%);
+    backdrop-filter: var(--ios-blur-light) saturate(160%);
+    -webkit-backdrop-filter: var(--ios-blur-light) saturate(160%);
+    border: 1px solid var(--ios-glass-border);
+    border-radius: var(--ios-radius-medium);
+    padding: 4px;
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.newsletter input[type="email"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 14px 16px;
+    color: rgba(255, 255, 255, 0.9);
+    outline: none;
+    border-radius: calc(var(--ios-radius-medium) - 2px);
+}
+
+.newsletter input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter button {
+    background: linear-gradient(135deg, 
+        rgba(52, 199, 89, 0.8) 0%, 
+        rgba(52, 199, 89, 0.6) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(52, 199, 89, 0.4);
+    border-radius: calc(var(--ios-radius-medium) - 2px);
+    padding: 14px 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 4px 16px rgba(52, 199, 89, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.newsletter button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, 
+        rgba(52, 199, 89, 1) 0%, 
+        rgba(52, 199, 89, 0.8) 100%);
+    box-shadow: 
+        0 8px 24px rgba(52, 199, 89, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* End of Apple Control Center Glassmorphism Enhancements */
+
 /* End of Ultra Advanced Glassmorphism CSS System */
