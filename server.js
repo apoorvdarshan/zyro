@@ -46,7 +46,7 @@ app.get('/api/search', async (req, res) => {
         q,
         lang = 'en',
         country,
-        max = 10,
+        max = 100,
         sortby = 'publishedAt',
         page = 1
     } = req.query;
@@ -60,7 +60,7 @@ app.get('/api/search', async (req, res) => {
     const params = {
         q,
         lang,
-        max: Math.min(parseInt(max), 10),
+        max: Math.min(parseInt(max), 100),
         sortby,
         page: parseInt(page)
     };
@@ -79,7 +79,7 @@ app.get('/api/top-headlines', async (req, res) => {
         category = 'general',
         lang = 'en',
         country = 'us',
-        max = 10,
+        max = 100,
         page = 1
     } = req.query;
 
@@ -87,7 +87,7 @@ app.get('/api/top-headlines', async (req, res) => {
         category,
         lang,
         country,
-        max: Math.min(parseInt(max), 10),
+        max: Math.min(parseInt(max), 100),
         page: parseInt(page)
     };
 

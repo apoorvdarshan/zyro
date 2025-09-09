@@ -3,6 +3,9 @@ class FuturisticNewsApp {
         this.apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : '/api';
         this.currentCategory = 'general';
         this.currentQuery = '';
+        this.currentPage = 1;
+        this.totalPages = 1;
+        this.articlesPerPage = 100;
         this.init();
     }
 
@@ -18,6 +21,8 @@ class FuturisticNewsApp {
         const searchBtn = document.getElementById('searchBtn');
         const searchInput = document.getElementById('searchInput');
         const categoryTiles = document.querySelectorAll('.category-tile');
+        const prevPageBtn = document.getElementById('prevPage');
+        const nextPageBtn = document.getElementById('nextPage');
 
         searchBtn.addEventListener('click', () => this.handleSearch());
         searchInput.addEventListener('keypress', (e) => {
@@ -29,6 +34,14 @@ class FuturisticNewsApp {
         categoryTiles.forEach(tile => {
             tile.addEventListener('click', (e) => this.handleCategoryClick(e));
         });
+
+        // Add pagination event listeners
+        if (prevPageBtn) {
+            prevPageBtn.addEventListener('click', () => this.previousPage());
+        }
+        if (nextPageBtn) {
+            nextPageBtn.addEventListener('click', () => this.nextPage());
+        }
 
         // Add footer navigation event listeners
         const footerLinks = document.querySelectorAll('.footer-links a[href^="#"]');
@@ -154,15 +167,21 @@ class FuturisticNewsApp {
         }
 
         this.currentQuery = query;
+        this.currentPage = 1;
+        this.performSearch();
+    }
+
+    async performSearch() {
         this.showLoading();
         
         try {
-            const response = await fetch(`${this.apiUrl}/search?q=${encodeURIComponent(query)}`);
+            const response = await fetch(`${this.apiUrl}/search?q=${encodeURIComponent(this.currentQuery)}&page=${this.currentPage}&max=${this.articlesPerPage}`);
             const data = await response.json();
             
             if (response.ok) {
                 this.displayNews(data.articles);
-                this.updateSectionTitle(`Search Results for "${query}"`);
+                this.updateSectionTitle(`Search Results for "${this.currentQuery}"`);
+                this.updatePagination(data.totalArticles || data.articles.length);
                 
                 // Auto-scroll to results section
                 setTimeout(() => {
@@ -186,6 +205,7 @@ class FuturisticNewsApp {
         const category = tile.dataset.category;
         this.currentCategory = category;
         this.currentQuery = '';
+        this.currentPage = 1;
         
         // Update active state with smooth transition
         document.querySelectorAll('.category-tile').forEach(t => {
@@ -201,6 +221,14 @@ class FuturisticNewsApp {
         this.updateSectionTitle(`${categoryName} News`);
         
         this.loadTopHeadlines();
+        
+        // Auto-scroll to results section
+        setTimeout(() => {
+            document.querySelector('.news-section').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }, 100);
     }
 
     handleFooterCategoryClick(e) {
@@ -211,6 +239,7 @@ class FuturisticNewsApp {
         
         this.currentCategory = category;
         this.currentQuery = '';
+        this.currentPage = 1;
         
         // Update active state for category tiles
         document.querySelectorAll('.category-tile').forEach(tile => {
@@ -243,11 +272,12 @@ class FuturisticNewsApp {
         this.showLoading();
         
         try {
-            const response = await fetch(`${this.apiUrl}/top-headlines?category=${this.currentCategory}`);
+            const response = await fetch(`${this.apiUrl}/top-headlines?category=${this.currentCategory}&page=${this.currentPage}&max=${this.articlesPerPage}`);
             const data = await response.json();
             
             if (response.ok) {
                 this.displayNews(data.articles);
+                this.updatePagination(data.totalArticles || data.articles.length);
             } else {
                 this.showError(data.errors ? data.errors.join(', ') : 'Failed to load headlines');
             }
@@ -402,6 +432,56 @@ class FuturisticNewsApp {
         setTimeout(() => {
             errorDiv.classList.add('hidden');
         }, 5000);
+    }
+
+    updatePagination(totalArticles) {
+        this.totalPages = Math.ceil(totalArticles / this.articlesPerPage);
+        
+        const paginationControls = document.getElementById('paginationControls');
+        const prevPageBtn = document.getElementById('prevPage');
+        const nextPageBtn = document.getElementById('nextPage');
+        const pageInfo = document.getElementById('pageInfo');
+        
+        if (paginationControls && totalArticles > this.articlesPerPage) {
+            paginationControls.style.display = 'flex';
+            
+            // Update page info
+            if (pageInfo) {
+                pageInfo.textContent = `Page ${this.currentPage} of ${this.totalPages}`;
+            }
+            
+            // Update button states
+            if (prevPageBtn) {
+                prevPageBtn.disabled = this.currentPage <= 1;
+            }
+            if (nextPageBtn) {
+                nextPageBtn.disabled = this.currentPage >= this.totalPages;
+            }
+        } else {
+            paginationControls.style.display = 'none';
+        }
+    }
+
+    async previousPage() {
+        if (this.currentPage > 1) {
+            this.currentPage--;
+            if (this.currentQuery) {
+                await this.performSearch();
+            } else {
+                await this.loadTopHeadlines();
+            }
+        }
+    }
+
+    async nextPage() {
+        if (this.currentPage < this.totalPages) {
+            this.currentPage++;
+            if (this.currentQuery) {
+                await this.performSearch();
+            } else {
+                await this.loadTopHeadlines();
+            }
+        }
     }
 }
 
