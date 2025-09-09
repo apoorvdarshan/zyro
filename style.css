@@ -6128,16 +6128,65 @@ footer::before {
     padding: 0 10px;
 }
 
-.sort-controls {
+.country-controls, .sort-controls {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.sort-label {
+.control-label {
     color: var(--text-secondary);
     font-size: 0.9rem;
     font-weight: 500;
+    white-space: nowrap;
+}
+
+.country-select {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 8px 16px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    outline: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 36px;
+    min-width: 140px;
+}
+
+.country-select:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.country-select:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 
+        0 0 0 3px rgba(99, 102, 241, 0.1),
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.country-select option, .sort-select option {
+    background: var(--background-primary);
+    color: var(--text-primary);
+    padding: 8px;
 }
 
 .sort-select {
@@ -6195,12 +6244,22 @@ footer::before {
         padding: 0 5px;
     }
     
-    .sort-controls {
+    .country-controls, .sort-controls {
         gap: 8px;
     }
     
-    .sort-label {
+    .control-label {
         font-size: 0.8rem;
+    }
+    
+    .country-select {
+        padding: 6px 12px;
+        padding-right: 32px;
+        font-size: 0.8rem;
+        border-radius: 10px;
+        background-size: 14px;
+        background-position: right 6px center;
+        min-width: 110px;
     }
     
     .sort-select {

@@ -7,6 +7,38 @@ class FuturisticNewsApp {
         this.totalPages = 1;
         this.articlesPerPage = 100;
         this.currentSortBy = 'publishedAt';
+        this.currentCountry = '';
+        this.countries = [
+            { name: 'Australia', code: 'au' },
+            { name: 'Brazil', code: 'br' },
+            { name: 'Canada', code: 'ca' },
+            { name: 'China', code: 'cn' },
+            { name: 'Egypt', code: 'eg' },
+            { name: 'France', code: 'fr' },
+            { name: 'Germany', code: 'de' },
+            { name: 'Greece', code: 'gr' },
+            { name: 'Hong Kong', code: 'hk' },
+            { name: 'India', code: 'in' },
+            { name: 'Ireland', code: 'ie' },
+            { name: 'Italy', code: 'it' },
+            { name: 'Japan', code: 'jp' },
+            { name: 'Netherlands', code: 'nl' },
+            { name: 'Norway', code: 'no' },
+            { name: 'Pakistan', code: 'pk' },
+            { name: 'Peru', code: 'pe' },
+            { name: 'Philippines', code: 'ph' },
+            { name: 'Portugal', code: 'pt' },
+            { name: 'Romania', code: 'ro' },
+            { name: 'Russian Federation', code: 'ru' },
+            { name: 'Singapore', code: 'sg' },
+            { name: 'Spain', code: 'es' },
+            { name: 'Sweden', code: 'se' },
+            { name: 'Switzerland', code: 'ch' },
+            { name: 'Taiwan', code: 'tw' },
+            { name: 'Ukraine', code: 'ua' },
+            { name: 'United Kingdom', code: 'gb' },
+            { name: 'United States', code: 'us' }
+        ];
         this.init();
     }
 
@@ -15,6 +47,7 @@ class FuturisticNewsApp {
         this.setupTimeDisplay();
         this.setupScrollAnimations();
         this.setupAdvancedSearch();
+        this.populateCountrySelect();
         this.loadTopHeadlines();
     }
 
@@ -25,6 +58,7 @@ class FuturisticNewsApp {
         const prevPageBtn = document.getElementById('prevPage');
         const nextPageBtn = document.getElementById('nextPage');
         const sortSelect = document.getElementById('sortSelect');
+        const countrySelect = document.getElementById('countrySelect');
 
         searchBtn.addEventListener('click', () => this.handleSearch());
         searchInput.addEventListener('keypress', (e) => {
@@ -48,6 +82,11 @@ class FuturisticNewsApp {
         // Add sort change listener
         if (sortSelect) {
             sortSelect.addEventListener('change', (e) => this.handleSortChange(e));
+        }
+
+        // Add country change listener
+        if (countrySelect) {
+            countrySelect.addEventListener('change', (e) => this.handleCountryChange(e));
         }
 
         // Add footer navigation event listeners
@@ -182,7 +221,14 @@ class FuturisticNewsApp {
         this.showLoading();
         
         try {
-            const response = await fetch(`${this.apiUrl}/search?q=${encodeURIComponent(this.currentQuery)}&page=${this.currentPage}&max=${this.articlesPerPage}&sortby=${this.currentSortBy}`);
+            let url = `${this.apiUrl}/search?q=${encodeURIComponent(this.currentQuery)}&page=${this.currentPage}&max=${this.articlesPerPage}&sortby=${this.currentSortBy}`;
+            
+            // Add country parameter if set
+            if (this.currentCountry) {
+                url += `&country=${this.currentCountry}`;
+            }
+            
+            const response = await fetch(url);
             const data = await response.json();
             
             if (response.ok) {
@@ -280,7 +326,14 @@ class FuturisticNewsApp {
         this.showLoading();
         
         try {
-            const response = await fetch(`${this.apiUrl}/top-headlines?category=${this.currentCategory}&page=${this.currentPage}&max=${this.articlesPerPage}`);
+            let url = `${this.apiUrl}/top-headlines?category=${this.currentCategory}&page=${this.currentPage}&max=${this.articlesPerPage}`;
+            
+            // Add country parameter if set
+            if (this.currentCountry) {
+                url += `&country=${this.currentCountry}`;
+            }
+            
+            const response = await fetch(url);
             const data = await response.json();
             
             if (response.ok) {
@@ -531,6 +584,40 @@ class FuturisticNewsApp {
             if (sortSelect) {
                 sortSelect.value = 'publishedAt';
             }
+        }
+    }
+
+    populateCountrySelect() {
+        const countrySelect = document.getElementById('countrySelect');
+        if (!countrySelect) return;
+        
+        // Add countries to select
+        this.countries.forEach(country => {
+            const option = document.createElement('option');
+            option.value = country.code;
+            option.textContent = country.name;
+            countrySelect.appendChild(option);
+        });
+    }
+
+    handleCountryChange(e) {
+        this.currentCountry = e.target.value;
+        this.currentPage = 1;
+        
+        // Reload current view (search or category)
+        if (this.currentQuery) {
+            this.performSearch();
+        } else {
+            this.loadTopHeadlines();
+        }
+    }
+
+    handleSortChange(e) {
+        this.currentSortBy = e.target.value;
+        this.currentPage = 1;
+        
+        if (this.currentQuery) {
+            this.performSearch();
         }
     }
 }
