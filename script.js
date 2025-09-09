@@ -470,6 +470,14 @@ class FuturisticNewsApp {
             } else {
                 await this.loadTopHeadlines();
             }
+            
+            // Scroll to top of news section after loading
+            setTimeout(() => {
+                document.querySelector('.news-section').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }, 100);
         }
     }
 
@@ -481,6 +489,14 @@ class FuturisticNewsApp {
             } else {
                 await this.loadTopHeadlines();
             }
+            
+            // Scroll to top of news section after loading
+            setTimeout(() => {
+                document.querySelector('.news-section').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }, 100);
         }
     }
 }
