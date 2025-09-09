@@ -6,6 +6,7 @@ class FuturisticNewsApp {
         this.currentPage = 1;
         this.totalPages = 1;
         this.articlesPerPage = 100;
+        this.currentSortBy = 'publishedAt';
         this.init();
     }
 
@@ -23,6 +24,7 @@ class FuturisticNewsApp {
         const categoryTiles = document.querySelectorAll('.category-tile');
         const prevPageBtn = document.getElementById('prevPage');
         const nextPageBtn = document.getElementById('nextPage');
+        const sortSelect = document.getElementById('sortSelect');
 
         searchBtn.addEventListener('click', () => this.handleSearch());
         searchInput.addEventListener('keypress', (e) => {
@@ -41,6 +43,11 @@ class FuturisticNewsApp {
         }
         if (nextPageBtn) {
             nextPageBtn.addEventListener('click', () => this.nextPage());
+        }
+
+        // Add sort change listener
+        if (sortSelect) {
+            sortSelect.addEventListener('change', (e) => this.handleSortChange(e));
         }
 
         // Add footer navigation event listeners
@@ -175,13 +182,14 @@ class FuturisticNewsApp {
         this.showLoading();
         
         try {
-            const response = await fetch(`${this.apiUrl}/search?q=${encodeURIComponent(this.currentQuery)}&page=${this.currentPage}&max=${this.articlesPerPage}`);
+            const response = await fetch(`${this.apiUrl}/search?q=${encodeURIComponent(this.currentQuery)}&page=${this.currentPage}&max=${this.articlesPerPage}&sortby=${this.currentSortBy}`);
             const data = await response.json();
             
             if (response.ok) {
                 this.displayNews(data.articles);
                 this.updateSectionTitle(`Search Results for "${this.currentQuery}"`);
                 this.updatePagination(data.totalArticles || data.articles.length);
+                this.updateSortVisibility(true);
                 
                 // Auto-scroll to results section
                 setTimeout(() => {
@@ -278,6 +286,7 @@ class FuturisticNewsApp {
             if (response.ok) {
                 this.displayNews(data.articles);
                 this.updatePagination(data.totalArticles || data.articles.length);
+                this.updateSortVisibility(false);
             } else {
                 this.showError(data.errors ? data.errors.join(', ') : 'Failed to load headlines');
             }
@@ -497,6 +506,31 @@ class FuturisticNewsApp {
                     block: 'start' 
                 });
             }, 100);
+        }
+    }
+
+    handleSortChange(e) {
+        this.currentSortBy = e.target.value;
+        this.currentPage = 1;
+        
+        if (this.currentQuery) {
+            this.performSearch();
+        }
+    }
+
+    updateSortVisibility(show) {
+        const newsControls = document.querySelector('.news-controls');
+        if (newsControls) {
+            newsControls.style.display = show ? 'flex' : 'none';
+        }
+        
+        // Reset sort to default when hiding
+        if (!show) {
+            this.currentSortBy = 'publishedAt';
+            const sortSelect = document.getElementById('sortSelect');
+            if (sortSelect) {
+                sortSelect.value = 'publishedAt';
+            }
         }
     }
 }
