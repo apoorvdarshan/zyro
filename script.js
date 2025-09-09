@@ -8,6 +8,7 @@ class FuturisticNewsApp {
         this.articlesPerPage = 100;
         this.currentSortBy = 'publishedAt';
         this.currentCountry = '';
+        this.currentLanguage = '';
         this.countries = [
             { name: 'Australia', code: 'au' },
             { name: 'Brazil', code: 'br' },
@@ -39,6 +40,29 @@ class FuturisticNewsApp {
             { name: 'United Kingdom', code: 'gb' },
             { name: 'United States', code: 'us' }
         ];
+        this.languages = [
+            { name: 'Arabic', code: 'ar' },
+            { name: 'Chinese', code: 'zh' },
+            { name: 'Dutch', code: 'nl' },
+            { name: 'English', code: 'en' },
+            { name: 'French', code: 'fr' },
+            { name: 'German', code: 'de' },
+            { name: 'Greek', code: 'el' },
+            { name: 'Hindi', code: 'hi' },
+            { name: 'Italian', code: 'it' },
+            { name: 'Japanese', code: 'ja' },
+            { name: 'Malayalam', code: 'ml' },
+            { name: 'Marathi', code: 'mr' },
+            { name: 'Norwegian', code: 'no' },
+            { name: 'Portuguese', code: 'pt' },
+            { name: 'Romanian', code: 'ro' },
+            { name: 'Russian', code: 'ru' },
+            { name: 'Spanish', code: 'es' },
+            { name: 'Swedish', code: 'sv' },
+            { name: 'Tamil', code: 'ta' },
+            { name: 'Telugu', code: 'te' },
+            { name: 'Ukrainian', code: 'uk' }
+        ];
         this.init();
     }
 
@@ -48,6 +72,7 @@ class FuturisticNewsApp {
         this.setupScrollAnimations();
         this.setupAdvancedSearch();
         this.populateCountrySelect();
+        this.populateLanguageSelect();
         this.loadTopHeadlines();
     }
 
@@ -59,6 +84,7 @@ class FuturisticNewsApp {
         const nextPageBtn = document.getElementById('nextPage');
         const sortSelect = document.getElementById('sortSelect');
         const countrySelect = document.getElementById('countrySelect');
+        const languageSelect = document.getElementById('languageSelect');
 
         searchBtn.addEventListener('click', () => this.handleSearch());
         searchInput.addEventListener('keypress', (e) => {
@@ -87,6 +113,11 @@ class FuturisticNewsApp {
         // Add country change listener
         if (countrySelect) {
             countrySelect.addEventListener('change', (e) => this.handleCountryChange(e));
+        }
+
+        // Add language change listener
+        if (languageSelect) {
+            languageSelect.addEventListener('change', (e) => this.handleLanguageChange(e));
         }
 
         // Add footer navigation event listeners
@@ -228,6 +259,11 @@ class FuturisticNewsApp {
                 url += `&country=${this.currentCountry}`;
             }
             
+            // Add language parameter if set
+            if (this.currentLanguage) {
+                url += `&lang=${this.currentLanguage}`;
+            }
+            
             const response = await fetch(url);
             const data = await response.json();
             
@@ -331,6 +367,11 @@ class FuturisticNewsApp {
             // Add country parameter if set
             if (this.currentCountry) {
                 url += `&country=${this.currentCountry}`;
+            }
+            
+            // Add language parameter if set
+            if (this.currentLanguage) {
+                url += `&lang=${this.currentLanguage}`;
             }
             
             const response = await fetch(url);
@@ -602,6 +643,31 @@ class FuturisticNewsApp {
 
     handleCountryChange(e) {
         this.currentCountry = e.target.value;
+        this.currentPage = 1;
+        
+        // Reload current view (search or category)
+        if (this.currentQuery) {
+            this.performSearch();
+        } else {
+            this.loadTopHeadlines();
+        }
+    }
+
+    populateLanguageSelect() {
+        const languageSelect = document.getElementById('languageSelect');
+        if (!languageSelect) return;
+        
+        // Add languages to select
+        this.languages.forEach(language => {
+            const option = document.createElement('option');
+            option.value = language.code;
+            option.textContent = language.name;
+            languageSelect.appendChild(option);
+        });
+    }
+
+    handleLanguageChange(e) {
+        this.currentLanguage = e.target.value;
         this.currentPage = 1;
         
         // Reload current view (search or category)
