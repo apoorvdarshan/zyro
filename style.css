@@ -6839,3 +6839,142 @@ footer::before {
 /* End of Sort Controls */
 
 /* End of Ultra Advanced Glassmorphism CSS System */
+
+/* =====================================================================
+   FUTURE PACK — ADVANCED NEO AESTHETIC (optional, non‑breaking)
+   This block extends visuals with modern glass, neon accents, and
+   motion-safe micro-interactions. It only refines existing components
+   and exposes utility classes you can opt into in markup later.
+   ---------------------------------------------------------------------
+   Notes:
+   - No markup changes are required for base upgrades below.
+   - Utilities are prefixed with `.u-` and `.fx-` to avoid collisions.
+   - All animations are guarded by `prefers-reduced-motion`.
+====================================================================== */
+
+:root {
+  /* Future Pack tokens */
+  --fp-surface-0: rgba(255,255,255,0.04);
+  --fp-surface-1: rgba(255,255,255,0.06);
+  --fp-surface-2: rgba(255,255,255,0.10);
+  --fp-ring: rgba(0, 231, 255, 0.28);
+  --fp-ring-strong: rgba(0, 231, 255, 0.42);
+  --fp-blue: #2dd4ff;
+  --fp-cyan: #22d3ee;
+  --fp-emerald: #34d399;
+  --fp-violet: #a78bfa;
+  --fp-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 18px 60px rgba(0,0,0,0.35);
+  --fp-inset: inset 0 1px 0 rgba(255,255,255,0.18);
+  --fp-trans: 320ms cubic-bezier(.2,.7,.2,1);
+}
+
+/* ---------- Utilities ---------- */
+.u-glass {
+  background: linear-gradient(180deg, var(--fp-surface-1), var(--fp-surface-0)) padding-box,
+              linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06)) border-box;
+  border: 1px solid transparent;
+  backdrop-filter: blur(20px) saturate(120%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  box-shadow: var(--fp-shadow);
+}
+
+.u-border-gradient {
+  border: 1px solid transparent;
+  border-image: linear-gradient(135deg, var(--neo-accent-1), var(--neo-accent-2)) 1;
+}
+
+.u-glow-s { box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 12px 36px rgba(0,231,255,.10); }
+.u-glow-l { box-shadow: 0 0 0 1px rgba(255,255,255,0.10), 0 24px 80px rgba(0,231,255,.14); }
+
+.u-text-gradient {
+  background: linear-gradient(90deg, var(--neo-accent-2), var(--neo-accent-1), var(--neo-accent-3));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.u-ring:focus-visible { outline: none; box-shadow: 0 0 0 2px rgba(255,255,255,0.25), 0 0 0 6px var(--fp-ring); }
+.u-ring-strong:focus-visible { outline: none; box-shadow: 0 0 0 2px rgba(255,255,255,0.35), 0 0 0 8px var(--fp-ring-strong); }
+
+/* ---------- Enhanced Components (non-breaking) ---------- */
+
+/* News controls container subtle divider and spacing */
+.news-controls {
+  gap: 16px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding-top: 14px;
+}
+
+/* News card: add faint inner highlight and image overlay blend */
+.news-card {
+  box-shadow: var(--fp-shadow);
+}
+.news-card .news-image-container::after,
+.news-card .image::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(80% 60% at 50% 10%, rgba(0,0,0,.0), rgba(0,0,0,.25));
+}
+
+.news-card-content::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
+}
+
+/* Social links: neon bezel with calm hover */
+.social-link {
+  background: linear-gradient(180deg, var(--fp-surface-2), var(--fp-surface-0)) padding-box,
+              linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.08)) border-box;
+  border: 1px solid transparent;
+  transition: transform var(--fp-trans), box-shadow var(--fp-trans);
+}
+.social-link:hover { transform: translateY(-4px); box-shadow: var(--fp-shadow), 0 0 0 1px rgba(0,231,255,.16); }
+
+/* Newsletter inputs: unify ring */
+.newsletter input[type="email"] { transition: box-shadow var(--fp-trans), border-color var(--fp-trans); }
+.newsletter input[type="email"]:focus { box-shadow: 0 0 0 2px rgba(255,255,255,0.25), 0 0 0 6px var(--fp-ring); border-color: rgba(255,255,255,0.35); }
+
+/* ---------- Skeletons for content loading ---------- */
+.skeleton { position: relative; overflow: hidden; background: rgba(255,255,255,0.06); border-radius: 12px; }
+.skeleton::after {
+  content: ""; position: absolute; inset: 0; transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.16), transparent);
+  animation: shimmer 1.6s infinite;
+}
+.news-card.skeleton { height: 320px; border: 1px solid rgba(255,255,255,.08); }
+.news-card.skeleton .news-card-content { display: none; }
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+/* ---------- Decorative backgrounds (opt-in) ---------- */
+.fx-aurora {
+  position: relative; isolation: isolate;
+  background: radial-gradient(800px 400px at 20% 10%, rgba(45,212,191,0.08), transparent 60%),
+              radial-gradient(900px 420px at 70% 0%, rgba(59,130,246,0.08), transparent 65%);
+}
+.fx-aurora::before {
+  content: ""; position: absolute; inset: -20%; z-index: -1;
+  background: conic-gradient(from 180deg, rgba(255,255,255,0.04), transparent 30%, rgba(255,255,255,0.04));
+  filter: blur(60px);
+}
+
+.fx-gridlines {
+  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 24px 24px; mask-image: radial-gradient(circle at 50% 15%, black 40%, transparent 70%);
+}
+
+/* ---------- Optional 3D hover hint (low-cost) ---------- */
+.tilt-lite { transform: perspective(1000px) rotateX(0) rotateY(0); transition: transform var(--fp-trans), box-shadow var(--fp-trans); }
+.tilt-lite:hover { transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-4px); }
+
+/* ---------- Reduced motion safety ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .social-link:hover, .tilt-lite:hover, .news-card:hover { transform: none; }
+  .skeleton::after { animation: none; }
+}
+
+/* ---------- Narrow devices fine-tuning ---------- */
+@media (max-width: 480px) {
+  .hero-content h1 { font-size: clamp(2rem, 8vw, 2.4rem); }
+  .section-title { font-size: clamp(1.4rem, 6vw, 1.8rem); }
+}
