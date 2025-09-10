@@ -1,127 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - zyro.news</title>
     <meta name="description" content="Get in touch with zyro.news - Contact us for news tips, partnerships, or general inquiries.">
+    <meta name="keywords" content="contact, zyro.news, news tips, partnerships, inquiries, support">
+    <meta name="author" content="zyro.news">
+    <link rel="canonical" href="https://zyro.news/contact.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact - zyro.news">
+    <meta property="og:description" content="Get in touch with zyro.news - Contact us for news tips, partnerships, or general inquiries.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zyro.news/contact.html">
+    <meta property="og:site_name" content="zyro.news">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem !important;
+            }
+            
+            main.container {
+                padding: 2rem 1rem !important;
+                max-width: 100% !important;
+            }
+            
+            .apple-liquid-card {
+                padding: 1.5rem !important;
+                margin: 1rem 0 !important;
+            }
+            
+            .section-header {
+                margin-bottom: 2rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem !important;
+            }
+            
+            /* Contact methods grid mobile - single column */
+            .contact-methods {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Contact form mobile */
+            .contact-form {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            /* Form inputs mobile */
+            .form-group input,
+            .form-group textarea {
+                padding: 0.875rem !important;
+                font-size: 1rem !important;
+            }
+            
+            .form-group textarea {
+                min-height: 120px !important;
+            }
+            
+            /* Icon sizes mobile */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 60px !important;
+                height: 60px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1.5rem !important;
+            }
+            
+            /* Contact card headers mobile */
+            .apple-liquid-card h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            /* Button mobile */
+            .apple-liquid-btn {
+                padding: 1rem 2rem !important;
+                font-size: 1rem !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            
+            /* Hero section mobile */
+            .hero-content h1 {
+                font-size: 2rem !important;
+            }
+            
+            .hero-content p {
+                font-size: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .apple-liquid-card {
+                padding: 1rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.6rem !important;
+            }
+            
+            .apple-liquid-card h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            /* Form inputs smaller screens */
+            .form-group input,
+            .form-group textarea {
+                padding: 0.75rem !important;
+                font-size: 0.95rem !important;
+            }
+            
+            /* Icon sizes smaller */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 50px !important;
+                height: 50px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1.2rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header role="banner" itemscope itemtype="https://schema.org/WPHeader">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <h1><a href="/" style="color: inherit; text-decoration: none;">zyro.news</a></h1>
+                <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                    <h1 itemprop="name"><a href="/" style="color: inherit; text-decoration: none;" itemprop="url">zyro.news</a></h1>
                 </div>
-                <nav class="header-nav">
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
                     <div class="nav-time" id="currentTime"></div>
                 </nav>
             </div>
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero-section" role="banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p>Get in touch for news tips, partnerships, or general inquiries</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <main class="container" style="padding: 4rem 2rem; max-width: 800px;">
-        <div style="background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius-large); padding: 3rem; margin-top: 2rem;">
-            <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 2rem; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Contact Us</h1>
+    <main role="main" class="container" style="padding: 4rem 2rem; max-width: 1000px;">
+        <div class="apple-liquid-card" style="padding: 4rem; margin: 2rem 0;">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">We'd love to hear from you - news tips, partnerships, or questions</p>
+            </div>
             
-            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
-                <p style="margin-bottom: 2rem; font-size: 1.2rem;">
-                    We'd love to hear from you. Whether you have a news tip, partnership inquiry, or general question, we're here to help.
-                </p>
-
-                <!-- Contact Methods -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem; text-align: center;">
-                        <div style="color: var(--accent-blue); font-size: 2rem; margin-bottom: 1rem;">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">General Inquiries</h3>
-                        <a href="mailto:ad13dtu@gmail.com" style="color: var(--accent-blue); text-decoration: none;">ad13dtu@gmail.com</a>
+            <!-- Contact Methods Grid -->
+            <div class="contact-methods" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                
+                <!-- General Inquiries Card -->
+                <div class="apple-liquid-card sound-wave" style="padding: 2.5rem; text-align: center; cursor: pointer;">
+                    <div class="apple-quantum" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fas fa-envelope" style="font-size: 2rem; color: var(--accent-blue);"></i>
                     </div>
-
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem; text-align: center;">
-                        <div style="color: var(--accent-blue); font-size: 2rem; margin-bottom: 1rem;">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">News Tips</h3>
-                        <a href="mailto:ad13dtu@gmail.com" style="color: var(--accent-blue); text-decoration: none;">ad13dtu@gmail.com</a>
-                    </div>
-
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem; text-align: center;">
-                        <div style="color: var(--accent-blue); font-size: 2rem; margin-bottom: 1rem;">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Partnerships</h3>
-                        <a href="mailto:ad13dtu@gmail.com" style="color: var(--accent-blue); text-decoration: none;">ad13dtu@gmail.com</a>
-                    </div>
+                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1rem;">General Inquiries</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                        Questions about our platform, feedback, or general support
+                    </p>
+                    <a href="mailto:ad13dtu@gmail.com?subject=General Inquiry" class="apple-liquid-btn sound-bubble" style="padding: 0.75rem 2rem;">
+                        <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                        Send Email
+                    </a>
                 </div>
 
-                <!-- Contact Form -->
-                <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem;">
-                    <h2 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 2rem; text-align: center;">Send us a Message</h2>
-                    
-                    <form style="display: grid; gap: 1.5rem;">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <div>
-                                <label style="display: block; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Name</label>
-                                <input type="text" required style="width: 100%; padding: 1rem; background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); color: var(--text-primary); font-size: 1rem;">
-                            </div>
-                            <div>
-                                <label style="display: block; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Email</label>
-                                <input type="email" required style="width: 100%; padding: 1rem; background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); color: var(--text-primary); font-size: 1rem;">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label style="display: block; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Subject</label>
-                            <input type="text" required style="width: 100%; padding: 1rem; background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); color: var(--text-primary); font-size: 1rem;">
-                        </div>
-                        
-                        <div>
-                            <label style="display: block; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Message</label>
-                            <textarea rows="5" required style="width: 100%; padding: 1rem; background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); color: var(--text-primary); font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
-                        </div>
-                        
-                        <button type="submit" style="padding: 1rem 2rem; background: var(--gradient-accent); color: white; border: none; border-radius: var(--border-radius); font-weight: 600; font-size: 1rem; cursor: pointer; transition: var(--transition);">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Social Media -->
-                <div style="margin-top: 3rem; text-align: center;">
-                    <h3 style="color: var(--text-primary); margin-bottom: 1.5rem;">Follow Us</h3>
-                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                        <a href="#" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); color: var(--text-primary); text-decoration: none; transition: var(--transition);">
-                            <i class="fab fa-twitter" style="color: var(--accent-blue);"></i>
-                            Twitter
-                        </a>
-                        <a href="#" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); color: var(--text-primary); text-decoration: none; transition: var(--transition);">
-                            <i class="fab fa-linkedin" style="color: var(--accent-blue);"></i>
-                            LinkedIn
-                        </a>
-                        <a href="#" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); color: var(--text-primary); text-decoration: none; transition: var(--transition);">
-                            <i class="fab fa-github" style="color: var(--accent-blue);"></i>
-                            GitHub
-                        </a>
+                <!-- News Tips Card -->
+                <div class="apple-liquid-card sound-wave" style="padding: 2.5rem; text-align: center; cursor: pointer;">
+                    <div class="apple-ethereal" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fas fa-newspaper" style="font-size: 2rem; color: var(--accent-cyan);"></i>
                     </div>
+                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1rem;">News Tips</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                        Share breaking news, story ideas, or important updates
+                    </p>
+                    <a href="mailto:ad13dtu@gmail.com?subject=News Tip" class="apple-liquid-btn sound-bubble" style="padding: 0.75rem 2rem;">
+                        <i class="fas fa-bullhorn" style="margin-right: 0.5rem;"></i>
+                        Submit Tip
+                    </a>
                 </div>
 
-                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
-                    <a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--gradient-accent); color: white; text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
-                        Back to Home
+                <!-- Partnerships Card -->
+                <div class="apple-liquid-card sound-wave" style="padding: 2.5rem; text-align: center; cursor: pointer;">
+                    <div class="apple-prism" style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fas fa-handshake" style="font-size: 2rem; color: var(--accent-violet);"></i>
+                    </div>
+                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1rem;">Partnerships</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                        Business collaborations, advertising, or strategic partnerships
+                    </p>
+                    <a href="mailto:ad13dtu@gmail.com?subject=Partnership Inquiry" class="apple-liquid-btn sound-bubble" style="padding: 0.75rem 2rem;">
+                        <i class="fas fa-users" style="margin-right: 0.5rem;"></i>
+                        Let's Partner
                     </a>
                 </div>
             </div>
+
+            <!-- Contact Form -->
+            <div class="apple-liquid-card" style="padding: 3rem; margin-bottom: 3rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; justify-content: center;">
+                    <div class="apple-iridescent" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-comments" style="font-size: 1.5rem; color: var(--accent-emerald);"></i>
+                    </div>
+                    <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0;">Send us a Message</h3>
+                </div>
+                
+                <form class="contact-form" style="display: grid; gap: 2rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <label style="display: block; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 600; font-size: 0.95rem;">Name *</label>
+                            <input type="text" required class="apple-liquid-input" style="width: 100%; padding: 1.25rem; font-size: 1rem;" placeholder="Your full name">
+                        </div>
+                        <div>
+                            <label style="display: block; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 600; font-size: 0.95rem;">Email *</label>
+                            <input type="email" required class="apple-liquid-input" style="width: 100%; padding: 1.25rem; font-size: 1rem;" placeholder="your.email@example.com">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 600; font-size: 0.95rem;">Subject *</label>
+                        <input type="text" required class="apple-liquid-input" style="width: 100%; padding: 1.25rem; font-size: 1rem;" placeholder="What's this about?">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 600; font-size: 0.95rem;">Message *</label>
+                        <textarea rows="6" required class="apple-liquid-input" style="width: 100%; padding: 1.25rem; font-size: 1rem; font-family: inherit; resize: vertical; line-height: 1.6;" placeholder="Tell us more about your inquiry..."></textarea>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <button type="submit" class="apple-liquid-btn sound-bubble" style="padding: 1.25rem 3rem; font-size: 1.1rem; font-weight: 600;">
+                            <i class="fas fa-paper-plane" style="margin-right: 0.75rem;"></i>
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- CTA Section -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="/" class="apple-liquid-btn sound-bubble" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+                    <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+                    Back to Home
+                </a>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -216,7 +367,10 @@
         
         updateTime();
         setInterval(updateTime, 1000);
-
+    </script>
+    
+    <script src="apple-sound-system.js"></script>
+    <script>
         // Contact form handling
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();

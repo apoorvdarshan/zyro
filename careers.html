@@ -1,106 +1,329 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers - zyro.news</title>
     <meta name="description" content="Join the zyro.news team - Explore exciting career opportunities in digital journalism and technology.">
+    <meta name="keywords" content="careers, jobs, zyro.news, digital journalism, technology jobs, remote work">
+    <meta name="author" content="zyro.news">
+    <link rel="canonical" href="https://zyro.news/careers.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Careers - zyro.news">
+    <meta property="og:description" content="Join the zyro.news team - Explore exciting career opportunities in digital journalism and technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zyro.news/careers.html">
+    <meta property="og:site_name" content="zyro.news">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem !important;
+            }
+            
+            main.container {
+                padding: 2rem 1rem !important;
+                max-width: 100% !important;
+            }
+            
+            .apple-liquid-card {
+                padding: 1.5rem !important;
+                margin: 1rem 0 !important;
+            }
+            
+            .section-header {
+                margin-bottom: 2rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem !important;
+            }
+            
+            /* Jobs grid mobile - single column */
+            .jobs-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Job card header mobile */
+            .apple-liquid-card h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            /* Benefits grid mobile */
+            .benefits-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            /* Icon sizes mobile */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 45px !important;
+                height: 45px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1.1rem !important;
+            }
+            
+            /* Salary and tags mobile */
+            .salary-range {
+                font-size: 1.1rem !important;
+            }
+            
+            .skills-tags {
+                gap: 0.5rem !important;
+            }
+            
+            .skill-tag {
+                padding: 0.3rem 0.6rem !important;
+                font-size: 0.8rem !important;
+            }
+            
+            /* Job card layout mobile */
+            .job-header {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 0.75rem !important;
+            }
+            
+            .job-status {
+                align-self: flex-end !important;
+            }
+            
+            /* Button mobile */
+            .apple-liquid-btn {
+                padding: 0.75rem 1.5rem !important;
+                font-size: 0.9rem !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            
+            /* Hero section mobile */
+            .hero-content h1 {
+                font-size: 2rem !important;
+            }
+            
+            .hero-content p {
+                font-size: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .apple-liquid-card {
+                padding: 1rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.6rem !important;
+            }
+            
+            .apple-liquid-card h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            /* Very small screen adjustments */
+            .job-description {
+                font-size: 0.95rem !important;
+                line-height: 1.5 !important;
+            }
+            
+            .salary-range {
+                font-size: 1rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header role="banner" itemscope itemtype="https://schema.org/WPHeader">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <h1><a href="/" style="color: inherit; text-decoration: none;">zyro.news</a></h1>
+                <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                    <h1 itemprop="name"><a href="/" style="color: inherit; text-decoration: none;" itemprop="url">zyro.news</a></h1>
                 </div>
-                <nav class="header-nav">
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
                     <div class="nav-time" id="currentTime"></div>
                 </nav>
             </div>
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero-section" role="banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Join Our Team</h1>
+                <p>Shape the future of digital journalism with innovative technology</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <main class="container" style="padding: 4rem 2rem; max-width: 900px;">
-        <div style="background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius-large); padding: 3rem; margin-top: 2rem;">
-            <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 2rem; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Careers</h1>
+    <main role="main" class="container" style="padding: 4rem 2rem; max-width: 1100px;">
+        <div class="apple-liquid-card" style="padding: 4rem; margin: 2rem 0;">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2 class="section-title">Open Positions</h2>
+                <p class="section-subtitle">Join our mission to revolutionize digital journalism</p>
+            </div>
             
-            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
-                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">Join Our Team</h2>
-                <p style="margin-bottom: 1.5rem;">
-                    At zyro.news, we're building the future of digital journalism. We're looking for passionate individuals who share our vision of making quality news accessible to everyone through innovative technology and exceptional user experiences.
-                </p>
-
-                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">Open Positions</h2>
+            <!-- Job Listings Grid -->
+            <div class="jobs-grid" style="display: grid; gap: 2rem; margin-bottom: 3rem;">
                 
-                <!-- Job Listings -->
-                <div style="margin-bottom: 2rem;">
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 1.5rem; margin-bottom: 1rem;">
-                        <h3 style="color: var(--accent-blue); font-size: 1.3rem; margin-bottom: 0.5rem;">Senior Full-Stack Developer</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Remote • Full-time</p>
-                        <p style="margin-bottom: 1rem;">Lead development of our news platform architecture, working with modern web technologies and API integrations.</p>
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                            <span style="background: var(--accent-dark); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: var(--border-radius); font-size: 0.8rem;">React</span>
-                            <span style="background: var(--accent-dark); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: var(--border-radius); font-size: 0.8rem;">Node.js</span>
-                            <span style="background: var(--accent-dark); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: var(--border-radius); font-size: 0.8rem;">API Development</span>
+                <!-- Job Card 1 -->
+                <div class="apple-liquid-card sound-wave" style="padding: 2.5rem; cursor: pointer;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                                <div class="apple-quantum" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-code" style="color: var(--accent-blue); font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin: 0;">Senior Full-Stack Developer</h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0.25rem 0 0 0;">Remote • Full-time • $120k-$180k</p>
+                                </div>
+                            </div>
                         </div>
+                        <span style="background: var(--accent-emerald); color: white; padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">HIRING</span>
                     </div>
-
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 1.5rem; margin-bottom: 1rem;">
-                        <h3 style="color: var(--accent-blue); font-size: 1.3rem; margin-bottom: 0.5rem;">UX/UI Designer</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Remote • Full-time</p>
-                        <p style="margin-bottom: 1rem;">Design intuitive user experiences for our news platform, focusing on readability and accessibility.</p>
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                            <span style="background: var(--accent-dark); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: var(--border-radius); font-size: 0.8rem;">Figma</span>
-                            <span style="background: var(--accent-dark); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: var(--border-radius); font-size: 0.8rem;">User Research</span>
-                            <span style="background: var(--accent-dark); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: var(--border-radius); font-size: 0.8rem;">Prototyping</span>
-                        </div>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+                        Lead development of our news platform architecture, working with modern web technologies and API integrations. Shape the future of digital journalism.
+                    </p>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                        <span class="apple-prism" style="padding: 0.4rem 1rem; border-radius: 16px; font-size: 0.85rem; color: var(--text-primary);">React</span>
+                        <span class="apple-ethereal" style="padding: 0.4rem 1rem; border-radius: 16px; font-size: 0.85rem; color: var(--text-primary);">Node.js</span>
+                        <span class="apple-iridescent" style="padding: 0.4rem 1rem; border-radius: 16px; font-size: 0.85rem; color: var(--text-primary);">API Development</span>
                     </div>
-
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 1.5rem; margin-bottom: 1rem;">
-                        <h3 style="color: var(--accent-blue); font-size: 1.3rem; margin-bottom: 0.5rem;">Content Strategy Manager</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Remote • Full-time</p>
-                        <p style="margin-bottom: 1rem;">Develop content strategies and editorial guidelines to enhance our news curation and presentation.</p>
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                            <span style="background: var(--accent-dark); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: var(--border-radius); font-size: 0.8rem;">Editorial</span>
-                            <span style="background: var(--accent-dark); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: var(--border-radius); font-size: 0.8rem;">SEO</span>
-                            <span style="background: var(--accent-dark); color: var(--accent-blue); padding: 0.3rem 0.8rem; border-radius: var(--border-radius); font-size: 0.8rem;">Analytics</span>
-                        </div>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <a href="mailto:ad13dtu@gmail.com?subject=Application: Senior Full-Stack Developer" class="apple-liquid-btn sound-bubble" style="flex: 1; text-align: center; padding: 0.75rem;">Apply Now</a>
+                        <button style="background: none; border: 1px solid var(--border-glass); color: var(--text-secondary); padding: 0.75rem; border-radius: var(--radius-md); cursor: pointer;">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
                     </div>
                 </div>
 
-                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">Why Work With Us?</h2>
-                <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem;">
-                    <li style="margin-bottom: 0.5rem;">Competitive salary and equity options</li>
-                    <li style="margin-bottom: 0.5rem;">100% remote work flexibility</li>
-                    <li style="margin-bottom: 0.5rem;">Health, dental, and vision insurance</li>
-                    <li style="margin-bottom: 0.5rem;">Professional development budget</li>
-                    <li style="margin-bottom: 0.5rem;">Collaborative and innovative work environment</li>
-                    <li style="margin-bottom: 0.5rem;">Opportunity to shape the future of digital journalism</li>
-                </ul>
-
-                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">How to Apply</h2>
-                <p style="margin-bottom: 1.5rem;">
-                    Interested in joining our team? Send your resume, portfolio, and a brief cover letter explaining why you're excited about zyro.news to <a href="mailto:ad13dtu@gmail.com" style="color: var(--accent-blue); text-decoration: none;">ad13dtu@gmail.com</a>
-                </p>
-
-                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
-                    <a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--gradient-accent); color: white; text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition); margin-right: 1rem;">
-                        Back to Home
-                    </a>
-                    <a href="mailto:ad13dtu@gmail.com" style="display: inline-block; padding: 1rem 2rem; background: var(--background-glass); border: 1px solid var(--accent-blue); color: var(--accent-blue); text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
-                        Apply Now
-                    </a>
+                <!-- Job Card 2 -->
+                <div class="apple-liquid-card sound-wave" style="padding: 2.5rem; cursor: pointer;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                                <div class="apple-prism" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-paint-brush" style="color: var(--accent-violet); font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin: 0;">UX/UI Designer</h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0.25rem 0 0 0;">Remote • Full-time • $90k-$130k</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span style="background: var(--accent-emerald); color: white; padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">HIRING</span>
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+                        Design intuitive user experiences for our news platform, focusing on readability, accessibility, and modern design patterns.
+                    </p>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                        <span class="apple-quantum" style="padding: 0.4rem 1rem; border-radius: 16px; font-size: 0.85rem; color: var(--text-primary);">Figma</span>
+                        <span class="apple-ethereal" style="padding: 0.4rem 1rem; border-radius: 16px; font-size: 0.85rem; color: var(--text-primary);">User Research</span>
+                        <span class="apple-iridescent" style="padding: 0.4rem 1rem; border-radius: 16px; font-size: 0.85rem; color: var(--text-primary);">Prototyping</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <a href="mailto:ad13dtu@gmail.com?subject=Application: UX/UI Designer" class="apple-liquid-btn sound-bubble" style="flex: 1; text-align: center; padding: 0.75rem;">Apply Now</a>
+                        <button style="background: none; border: 1px solid var(--border-glass); color: var(--text-secondary); padding: 0.75rem; border-radius: var(--radius-md); cursor: pointer;">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                    </div>
                 </div>
+
+                <!-- Job Card 3 -->
+                <div class="apple-liquid-card sound-wave" style="padding: 2.5rem; cursor: pointer;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                                <div class="apple-ethereal" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-bullhorn" style="color: var(--accent-cyan); font-size: 1.2rem;"></i>
+                                </div>
+                                <div>
+                                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin: 0;">Content Strategy Manager</h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0.25rem 0 0 0;">Remote • Full-time • $80k-$120k</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span style="background: var(--accent-emerald); color: white; padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">HIRING</span>
+                    </div>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+                        Develop content strategies and editorial guidelines to enhance our news curation, SEO performance, and user engagement.
+                    </p>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                        <span class="apple-prism" style="padding: 0.4rem 1rem; border-radius: 16px; font-size: 0.85rem; color: var(--text-primary);">Editorial</span>
+                        <span class="apple-quantum" style="padding: 0.4rem 1rem; border-radius: 16px; font-size: 0.85rem; color: var(--text-primary);">SEO</span>
+                        <span class="apple-iridescent" style="padding: 0.4rem 1rem; border-radius: 16px; font-size: 0.85rem; color: var(--text-primary);">Analytics</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <a href="mailto:ad13dtu@gmail.com?subject=Application: Content Strategy Manager" class="apple-liquid-btn sound-bubble" style="flex: 1; text-align: center; padding: 0.75rem;">Apply Now</a>
+                        <button style="background: none; border: 1px solid var(--border-glass); color: var(--text-secondary); padding: 0.75rem; border-radius: var(--radius-md); cursor: pointer;">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                    <div class="apple-iridescent" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-heart" style="font-size: 1.5rem; color: var(--accent-emerald);"></i>
+                    </div>
+                    <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0;">Why Work With Us?</h3>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i class="fas fa-dollar-sign" style="color: var(--accent-emerald);"></i>
+                        <span style="color: var(--text-primary);">Competitive salary and equity options</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i class="fas fa-home" style="color: var(--accent-blue);"></i>
+                        <span style="color: var(--text-primary);">100% remote work flexibility</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i class="fas fa-heartbeat" style="color: var(--accent-violet);"></i>
+                        <span style="color: var(--text-primary);">Health, dental, and vision insurance</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i class="fas fa-graduation-cap" style="color: var(--accent-cyan);"></i>
+                        <span style="color: var(--text-primary);">Professional development budget</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="/" class="apple-liquid-btn sound-bubble" style="padding: 1rem 2.5rem; font-size: 1.1rem; margin-right: 1rem;">
+                    <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+                    Back to Home
+                </a>
+                <a href="mailto:ad13dtu@gmail.com?subject=General Application" class="apple-liquid-btn apple-quantum sound-wave" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+                    <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+                    General Application
+                </a>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -196,5 +419,7 @@
         updateTime();
         setInterval(updateTime, 1000);
     </script>
+    
+    <script src="apple-sound-system.js"></script>
 </body>
 </html>

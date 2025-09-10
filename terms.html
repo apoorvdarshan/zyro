@@ -1,118 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terms and Conditions - zyro.news</title>
+    <meta name="description" content="Terms and conditions for using zyro.news - Read our user agreement and service terms." />
+    <meta name="keywords" content="terms, conditions, zyro.news, user agreement, service terms, legal" />
+    <meta name="author" content="zyro.news" />
+    <link rel="canonical" href="https://zyro.news/terms.html" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Terms and Conditions - zyro.news" />
+    <meta property="og:description" content="Terms and conditions for using zyro.news - Read our user agreement and service terms." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zyro.news/terms.html" />
+    <meta property="og:site_name" content="zyro.news" />
+    
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <style>
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem !important;
+            }
+            
+            main.container {
+                padding: 2rem 1rem !important;
+                max-width: 100% !important;
+            }
+            
+            .apple-liquid-card {
+                padding: 1.5rem !important;
+                margin: 1rem 0 !important;
+            }
+            
+            .section-header {
+                margin-bottom: 2rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem !important;
+            }
+            
+            /* Terms sections mobile */
+            .terms-section {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Card headers mobile */
+            .apple-liquid-card h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            /* Icon sizes mobile */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 45px !important;
+                height: 45px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1.1rem !important;
+            }
+            
+            /* List items mobile */
+            .terms-list {
+                gap: 0.5rem !important;
+            }
+            
+            .terms-list > div {
+                gap: 0.5rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            .terms-list span,
+            .terms-list div {
+                font-size: 0.95rem !important;
+                line-height: 1.5 !important;
+            }
+            
+            /* Button mobile */
+            .apple-liquid-btn {
+                padding: 0.875rem 1.5rem !important;
+                font-size: 0.95rem !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            
+            /* Hero section mobile */
+            .hero-content h1 {
+                font-size: 2rem !important;
+            }
+            
+            .hero-content p {
+                font-size: 1rem !important;
+            }
+            
+            /* Text content mobile */
+            .apple-liquid-card p {
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .apple-liquid-card {
+                padding: 1rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.6rem !important;
+            }
+            
+            .apple-liquid-card h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            /* Text smaller on very small screens */
+            .apple-liquid-card p {
+                font-size: 0.95rem !important;
+            }
+            
+            .terms-list span,
+            .terms-list div {
+                font-size: 0.9rem !important;
+            }
+            
+            /* Icon sizes smaller */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 40px !important;
+                height: 40px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1rem !important;
+            }
+        }
+    </style>
   </head>
   <body>
-    <header>
+    <!-- Header -->
+    <header role="banner" itemscope itemtype="https://schema.org/WPHeader">
       <div class="container">
-        <h1><a href="/" style="color: white; text-decoration: none;">zyro.news</a></h1>
-        <p>Terms and Conditions</p>
+        <div class="header-content">
+          <div class="logo" itemscope itemtype="https://schema.org/Organization">
+            <h1 itemprop="name"><a href="/" style="color: inherit; text-decoration: none;" itemprop="url">zyro.news</a></h1>
+          </div>
+          <nav class="header-nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-time" id="currentTime"></div>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="container policy-content">
-      <h2>Terms and Conditions</h2>
-      <p><strong>Last updated:</strong> January 2025</p>
-
-      <section>
-        <h3>1. Acceptance of Terms</h3>
-        <p>By accessing and using zyro.news ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
-      </section>
-
-      <section>
-        <h3>2. Description of Service</h3>
-        <p>zyro.news is a news aggregation website that provides access to news articles from various sources. We aggregate and display news content to help users stay informed about current events.</p>
-      </section>
-
-      <section>
-        <h3>3. User Conduct</h3>
-        <p>You agree not to use the Service to:</p>
-        <ul>
-          <li>Violate any applicable laws or regulations</li>
-          <li>Transmit any harmful, threatening, abusive, or defamatory content</li>
-          <li>Attempt to gain unauthorized access to our systems</li>
-          <li>Interfere with the proper working of the Service</li>
-          <li>Use automated systems to access the Service without permission</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>4. Content and Intellectual Property</h3>
-        <p>The news articles and content displayed on zyro.news are sourced from third-party providers. We do not claim ownership of the news content. All original content, design, and functionality of zyro.news remains our intellectual property.</p>
-      </section>
-
-      <section>
-        <h3>5. Third-Party Content</h3>
-        <p>zyro.news aggregates news from various external sources. We are not responsible for the accuracy, completeness, or reliability of third-party content. Users should verify information from original sources.</p>
-      </section>
-
-      <section>
-        <h3>6. Disclaimer of Warranties</h3>
-        <p>The Service is provided "as is" without warranty of any kind. We disclaim all warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
-      </section>
-
-      <section>
-        <h3>7. Limitation of Liability</h3>
-        <p>In no event shall zyro.news be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, or goodwill.</p>
-      </section>
-
-      <section>
-        <h3>8. Privacy</h3>
-        <p>Your privacy is important to us. Please review our <a href="/privacy.html">Privacy Policy</a>, which also governs your use of the Service.</p>
-      </section>
-
-      <section>
-        <h3>9. Changes to Terms</h3>
-        <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting on this page. Your continued use of the Service constitutes acceptance of the modified terms.</p>
-      </section>
-
-      <section>
-        <h3>10. Contact Information</h3>
-        <p>If you have any questions about these Terms and Conditions, please contact us at:</p>
-        <p>Email: <a href="mailto:ad13dtu@gmail.com">ad13dtu@gmail.com</a></p>
-      </section>
-    </main>
-
-    <section class="contact-section">
+    <!-- Hero Section -->
+    <section class="hero-section" role="banner">
       <div class="container">
-        <h3>Connect with Us</h3>
-        <div class="social-icons">
-          <a href="https://github.com/apoorvdarshan" target="_blank" rel="noopener noreferrer" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/apoorvdarshan" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://youtube.com/@apoorvdarshan" target="_blank" rel="noopener noreferrer" title="YouTube">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="https://instagram.com/apoorvdarshan" target="_blank" rel="noopener noreferrer" title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://twitter.com/apoorvdarshan" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
-            <span class="x-icon">𝕏</span>
-          </a>
-          <a href="mailto:ad13dtu@gmail.com" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
+        <div class="hero-content">
+          <h1>Terms and Conditions</h1>
+          <p>User agreement and service terms for zyro.news</p>
         </div>
       </div>
     </section>
 
-    <footer>
+    <!-- Main Content -->
+    <main role="main" class="container" style="padding: 4rem 2rem; max-width: 1000px;">
+      <div class="apple-liquid-card" style="padding: 4rem; margin: 2rem 0;">
+        <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+          <h2 class="section-title">Terms and Conditions</h2>
+          <p class="section-subtitle">Last updated: January 2025</p>
+        </div>
+
+        <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-quantum" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-handshake" style="font-size: 1.2rem; color: var(--accent-blue);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">1. Acceptance of Terms</h3>
+            </div>
+            <p style="margin: 0;">By accessing and using zyro.news ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-ethereal" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-newspaper" style="font-size: 1.2rem; color: var(--accent-cyan);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">2. Description of Service</h3>
+            </div>
+            <p style="margin: 0;">zyro.news is a news aggregation website that provides access to news articles from various sources. We aggregate and display news content to help users stay informed about current events.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-prism" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-user-shield" style="font-size: 1.2rem; color: var(--accent-emerald);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">3. User Conduct</h3>
+            </div>
+            <p style="margin-bottom: 1.5rem;">You agree not to use the Service to:</p>
+            <div style="display: grid; gap: 0.75rem;">
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-times-circle" style="color: var(--accent-red); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Violate any applicable laws or regulations</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-times-circle" style="color: var(--accent-red); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Transmit any harmful, threatening, abusive, or defamatory content</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-times-circle" style="color: var(--accent-red); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Attempt to gain unauthorized access to our systems</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-times-circle" style="color: var(--accent-red); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Interfere with the proper working of the Service</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-times-circle" style="color: var(--accent-red); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Use automated systems to access the Service without permission</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-iridescent" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-copyright" style="font-size: 1.2rem; color: var(--accent-violet);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">4. Content and Intellectual Property</h3>
+            </div>
+            <p style="margin: 0;">The news articles and content displayed on zyro.news are sourced from third-party providers. We do not claim ownership of the news content. All original content, design, and functionality of zyro.news remains our intellectual property.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-quantum" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-external-link-alt" style="font-size: 1.2rem; color: var(--accent-orange);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">5. Third-Party Content</h3>
+            </div>
+            <p style="margin: 0;">zyro.news aggregates news from various external sources. We are not responsible for the accuracy, completeness, or reliability of third-party content. Users should verify information from original sources.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-ethereal" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-exclamation-triangle" style="font-size: 1.2rem; color: var(--accent-yellow);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">6. Disclaimer of Warranties</h3>
+            </div>
+            <p style="margin: 0;">The Service is provided "as is" without warranty of any kind. We disclaim all warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-prism" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-balance-scale" style="font-size: 1.2rem; color: var(--accent-red);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">7. Limitation of Liability</h3>
+            </div>
+            <p style="margin: 0;">In no event shall zyro.news be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, or goodwill.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-iridescent" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-shield-alt" style="font-size: 1.2rem; color: var(--accent-green);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">8. Privacy</h3>
+            </div>
+            <p style="margin: 0;">Your privacy is important to us. Please review our <a href="/privacy.html" style="color: var(--accent-blue); text-decoration: none;">Privacy Policy</a>, which also governs your use of the Service.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-quantum" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-edit" style="font-size: 1.2rem; color: var(--accent-purple);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">9. Changes to Terms</h3>
+            </div>
+            <p style="margin: 0;">We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting on this page. Your continued use of the Service constitutes acceptance of the modified terms.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 3rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-ethereal" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-envelope" style="font-size: 1.2rem; color: var(--accent-blue);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">10. Contact Information</h3>
+            </div>
+            <p style="margin-bottom: 1rem;">If you have any questions about these Terms and Conditions, please contact us at:</p>
+            <a href="mailto:ad13dtu@gmail.com" class="apple-liquid-btn sound-bubble" style="display: inline-block; padding: 0.75rem 1.5rem; font-size: 1rem;">
+              <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+              ad13dtu@gmail.com
+            </a>
+          </div>
+
+          <!-- Back to Home -->
+          <div style="text-align: center; margin: 2rem 0;">
+            <a href="/" class="apple-liquid-btn sound-bubble" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+              <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+              Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
       <div class="container">
-        <p>&copy; 2025 zyro.news</p>
-        <div class="footer-links">
-          <a href="/terms.html">Terms</a>
-          <a href="/privacy.html">Privacy</a>
-          <a href="/cookies.html">Cookies</a>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>News</h4>
+            <div class="footer-links">
+              <a href="/#general">Breaking News</a>
+              <a href="/#world">World News</a>
+              <a href="/#politics">Politics</a>
+              <a href="/#business">Business</a>
+              <a href="/#technology">Technology</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Sections</h4>
+            <div class="footer-links">
+              <a href="/#sports">Sports</a>
+              <a href="/#entertainment">Entertainment</a>
+              <a href="/#science">Science</a>
+              <a href="/#health">Health</a>
+              <a href="/#opinion">Opinion</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>About</h4>
+            <div class="footer-links">
+              <a href="about.html">About Us</a>
+              <a href="careers.html">Careers</a>
+              <a href="contact.html">Contact</a>
+              <a href="advertise.html">Advertise with us</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Get the latest news delivered to your inbox</p>
+            <div class="newsletter">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookies.html">Cookie Policy</a>
+          </div>
+          <div class="copyright">
+            © 2025 zyro.news. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
+    <script>
+      // Multi-timezone time display for header (matching index.html)
+      function updateTime() {
+        const now = new Date();
+        
+        // Multiple time zones
+        const timeZones = [
+          { label: 'NYC', zone: 'America/New_York' },
+          { label: 'LON', zone: 'Europe/London' },
+          { label: 'TYO', zone: 'Asia/Tokyo' },
+          { label: 'SYD', zone: 'Australia/Sydney' }
+        ];
+        
+        const times = timeZones.map(tz => {
+          const time = now.toLocaleTimeString('en-US', {
+            timeZone: tz.zone,
+            hour12: false,
+            hour: '2-digit',
+            minute: '2-digit'
+          });
+          return `${tz.label} ${time}`;
+        });
+        
+        const dateString = now.toLocaleDateString('en-US', {
+          weekday: 'short',
+          month: 'short',
+          day: 'numeric'
+        });
+        
+        const timeElement = document.getElementById('currentTime');
+        if (timeElement) {
+          timeElement.textContent = `${dateString} | ${times.join(' | ')}`;
+        }
+      }
+      
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+    
+    <script src="apple-sound-system.js"></script>
   </body>
 </html>

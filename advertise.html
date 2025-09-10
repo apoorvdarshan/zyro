@@ -1,166 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advertise with us - zyro.news</title>
     <meta name="description" content="Partner with zyro.news - Reach our engaged audience with targeted advertising solutions.">
+    <meta name="keywords" content="advertising, zyro.news, partnerships, marketing, digital advertising, news audience">
+    <meta name="author" content="zyro.news">
+    <link rel="canonical" href="https://zyro.news/advertise.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Advertise with us - zyro.news">
+    <meta property="og:description" content="Partner with zyro.news - Reach our engaged audience with targeted advertising solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zyro.news/advertise.html">
+    <meta property="og:site_name" content="zyro.news">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem !important;
+            }
+            
+            main.container {
+                padding: 2rem 1rem !important;
+                max-width: 100% !important;
+            }
+            
+            .apple-liquid-card {
+                padding: 1.5rem !important;
+                margin: 1rem 0 !important;
+            }
+            
+            .section-header {
+                margin-bottom: 2rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem !important;
+            }
+            
+            /* Stats grid mobile */
+            .stats-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+                margin-bottom: 3rem !important;
+            }
+            
+            /* Advertising packages grid mobile - single column */
+            .advertising-packages {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Package card headers mobile */
+            .apple-liquid-card h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            /* Features list mobile */
+            .features-list {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .features-list > div {
+                gap: 0.5rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            /* Pricing mobile */
+            .price-display {
+                font-size: 1.5rem !important;
+            }
+            
+            /* Icon sizes mobile */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 50px !important;
+                height: 50px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1.2rem !important;
+            }
+            
+            /* Button mobile */
+            .apple-liquid-btn {
+                padding: 0.875rem 1.5rem !important;
+                font-size: 0.95rem !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            
+            /* Why choose us grid mobile */
+            .why-choose-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Hero section mobile */
+            .hero-content h1 {
+                font-size: 2rem !important;
+            }
+            
+            .hero-content p {
+                font-size: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .apple-liquid-card {
+                padding: 1rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.6rem !important;
+            }
+            
+            .apple-liquid-card h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            /* Stats mobile smaller */
+            .stats-grid .apple-quantum,
+            .stats-grid .apple-ethereal,
+            .stats-grid .apple-prism {
+                padding: 1.5rem !important;
+            }
+            
+            .stats-grid div[style*="font-size: 3rem"] {
+                font-size: 2rem !important;
+            }
+            
+            /* Features list smaller spacing */
+            .features-list span {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header role="banner" itemscope itemtype="https://schema.org/WPHeader">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <h1><a href="/" style="color: inherit; text-decoration: none;">zyro.news</a></h1>
+                <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                    <h1 itemprop="name"><a href="/" style="color: inherit; text-decoration: none;" itemprop="url">zyro.news</a></h1>
                 </div>
-                <nav class="header-nav">
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
                     <div class="nav-time" id="currentTime"></div>
                 </nav>
             </div>
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero-section" role="banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Advertise with zyro.news</h1>
+                <p>Reach our engaged audience with premium advertising solutions</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <main class="container" style="padding: 4rem 2rem; max-width: 900px;">
-        <div style="background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius-large); padding: 3rem; margin-top: 2rem;">
-            <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 2rem; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Advertise with us</h1>
+    <main role="main" class="container" style="padding: 4rem 2rem; max-width: 1100px;">
+        <div class="apple-liquid-card" style="padding: 4rem; margin: 2rem 0;">
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title">Advertising Solutions</h2>
+                <p class="section-subtitle">Reach our engaged audience with premium advertising packages</p>
+            </div>
+
+            <!-- Key Stats -->
+            <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                <div class="apple-quantum" style="padding: 2rem; text-align: center; border-radius: var(--radius-xl);">
+                    <div style="color: var(--accent-blue); font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">50K+</div>
+                    <p style="color: var(--text-primary); font-weight: 600; margin: 0;">Monthly Readers</p>
+                </div>
+                <div class="apple-ethereal" style="padding: 2rem; text-align: center; border-radius: var(--radius-xl);">
+                    <div style="color: var(--accent-cyan); font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">95%</div>
+                    <p style="color: var(--text-primary); font-weight: 600; margin: 0;">Engagement Rate</p>
+                </div>
+                <div class="apple-prism" style="padding: 2rem; text-align: center; border-radius: var(--radius-xl);">
+                    <div style="color: var(--accent-emerald); font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">24/7</div>
+                    <p style="color: var(--text-primary); font-weight: 600; margin: 0;">Global Coverage</p>
+                </div>
+            </div>
             
-            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
-                <p style="margin-bottom: 2rem; font-size: 1.2rem;">
+            <!-- About Section -->
+            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem; margin-bottom: 4rem;">
+                <p style="margin-bottom: 0; font-size: 1.2rem; text-align: center;">
                     Reach thousands of engaged readers who trust zyro.news for their daily news consumption. Our advertising solutions help you connect with audiences who value quality journalism and informed decision-making.
                 </p>
+            </div>
 
-                <!-- Key Stats -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem; text-align: center;">
-                        <div style="color: var(--accent-blue); font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">50K+</div>
-                        <p style="color: var(--text-primary); font-weight: 600;">Monthly Readers</p>
-                    </div>
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem; text-align: center;">
-                        <div style="color: var(--accent-cyan); font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">95%</div>
-                        <p style="color: var(--text-primary); font-weight: 600;">Engaged Audience</p>
-                    </div>
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem; text-align: center;">
-                        <div style="color: var(--accent-emerald); font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">24/7</div>
-                        <p style="color: var(--text-primary); font-weight: 600;">Global Coverage</p>
-                    </div>
-                </div>
-
-                <!-- Advertising Options -->
-                <h2 style="color: var(--text-primary); font-size: 1.8rem; margin: 3rem 0 2rem;">Advertising Solutions</h2>
+            <!-- Advertising Packages -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
                 
-                <div style="margin-bottom: 3rem;">
-                    <!-- Banner Ads -->
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem; margin-bottom: 2rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <div style="color: var(--accent-blue); font-size: 1.5rem;">
-                                <i class="fas fa-rectangle-ad"></i>
-                            </div>
-                            <h3 style="color: var(--text-primary); font-size: 1.4rem; margin: 0;">Banner Advertisements</h3>
+                <!-- Banner Advertisements -->
+                <div class="apple-liquid-card sound-wave" style="padding: 3rem; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                        <div class="apple-quantum" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-rectangle-ad" style="font-size: 1.5rem; color: var(--accent-blue);"></i>
                         </div>
-                        <p style="margin-bottom: 1rem;">Premium placement across our website with high visibility and engagement rates.</p>
-                        <ul style="margin-bottom: 1rem; padding-left: 1.5rem;">
-                            <li style="margin-bottom: 0.5rem;">Header banner (728x90)</li>
-                            <li style="margin-bottom: 0.5rem;">Sidebar banner (300x250)</li>
-                            <li style="margin-bottom: 0.5rem;">In-article placement</li>
-                            <li style="margin-bottom: 0.5rem;">Mobile-optimized formats</li>
-                        </ul>
-                        <div style="color: var(--accent-blue); font-weight: 600;">Starting at $500/month</div>
+                        <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">Banner Advertisements</h3>
                     </div>
-
-                    <!-- Native Content -->
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem; margin-bottom: 2rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <div style="color: var(--accent-cyan); font-size: 1.5rem;">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                            <h3 style="color: var(--text-primary); font-size: 1.4rem; margin: 0;">Sponsored Content</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">
+                        Premium placement across our website with high visibility and engagement rates.
+                    </p>
+                    <div class="features-list" style="margin-bottom: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-blue); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Header banner (728x90)</span>
                         </div>
-                        <p style="margin-bottom: 1rem;">Native advertising that seamlessly integrates with our editorial content while maintaining transparency.</p>
-                        <ul style="margin-bottom: 1rem; padding-left: 1.5rem;">
-                            <li style="margin-bottom: 0.5rem;">Thought leadership articles</li>
-                            <li style="margin-bottom: 0.5rem;">Industry insights and analysis</li>
-                            <li style="margin-bottom: 0.5rem;">Product announcements</li>
-                            <li style="margin-bottom: 0.5rem;">Expert commentary</li>
-                        </ul>
-                        <div style="color: var(--accent-cyan); font-weight: 600;">Starting at $1,500/article</div>
-                    </div>
-
-                    <!-- Newsletter Sponsorship -->
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem; margin-bottom: 2rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <div style="color: var(--accent-emerald); font-size: 1.5rem;">
-                                <i class="fas fa-envelope-open-text"></i>
-                            </div>
-                            <h3 style="color: var(--text-primary); font-size: 1.4rem; margin: 0;">Newsletter Sponsorship</h3>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-blue); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Sidebar banner (300x250)</span>
                         </div>
-                        <p style="margin-bottom: 1rem;">Direct access to our subscriber base with dedicated newsletter placements.</p>
-                        <ul style="margin-bottom: 1rem; padding-left: 1.5rem;">
-                            <li style="margin-bottom: 0.5rem;">Header/footer placement</li>
-                            <li style="margin-bottom: 0.5rem;">Dedicated sponsor section</li>
-                            <li style="margin-bottom: 0.5rem;">Weekly or monthly campaigns</li>
-                            <li style="margin-bottom: 0.5rem;">Performance analytics</li>
-                        </ul>
-                        <div style="color: var(--accent-emerald); font-weight: 600;">Starting at $750/send</div>
-                    </div>
-                </div>
-
-                <!-- Why Choose Us -->
-                <h2 style="color: var(--text-primary); font-size: 1.8rem; margin: 3rem 0 2rem;">Why Partner with zyro.news?</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                    <div>
-                        <div style="color: var(--accent-blue); font-size: 2rem; margin-bottom: 1rem;">
-                            <i class="fas fa-users"></i>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-blue); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">In-article placement</span>
                         </div>
-                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Quality Audience</h3>
-                        <p>Our readers are professionals, decision-makers, and engaged citizens who value credible news sources.</p>
-                    </div>
-                    <div>
-                        <div style="color: var(--accent-cyan); font-size: 2rem; margin-bottom: 1rem;">
-                            <i class="fas fa-chart-line"></i>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-blue); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Mobile-optimized formats</span>
                         </div>
-                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Detailed Analytics</h3>
-                        <p>Comprehensive reporting on impression, clicks, engagement, and conversion metrics for all campaigns.</p>
                     </div>
-                    <div>
-                        <div style="color: var(--accent-emerald); font-size: 2rem; margin-bottom: 1rem;">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3 style="color: var(--text-primary); margin-bottom: 1rem;">Custom Solutions</h3>
-                        <p>Tailored advertising packages designed to meet your specific business objectives and budget.</p>
+                    <div style="margin-bottom: 2rem;">
+                        <div style="color: var(--accent-blue); font-size: 2rem; font-weight: 800;">$500</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">per month</div>
                     </div>
-                </div>
-
-                <!-- Contact CTA -->
-                <div style="background: var(--primary-dark); border: 1px solid var(--accent-blue); border-radius: var(--border-radius); padding: 2rem; text-align: center; margin-bottom: 2rem;">
-                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1rem;">Ready to Get Started?</h3>
-                    <p style="margin-bottom: 2rem;">Contact our advertising team to discuss your campaign goals and create a custom solution that delivers results.</p>
-                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                        <a href="mailto:ad13dtu@gmail.com" style="display: inline-block; padding: 1rem 2rem; background: var(--gradient-accent); color: white; text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
-                            <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
-                            Contact Us
-                        </a>
-                        <a href="tel:+1-555-0123" style="display: inline-block; padding: 1rem 2rem; background: var(--background-glass); border: 1px solid var(--accent-blue); color: var(--accent-blue); text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
-                            <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>
-                            +1 (555) 012-3456
-                        </a>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
-                    <a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--gradient-accent); color: white; text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
-                        Back to Home
+                    <a href="mailto:ad13dtu@gmail.com?subject=Banner Advertisement Inquiry" class="apple-liquid-btn sound-bubble" style="width: 100%; padding: 1rem; text-align: center; display: block; text-decoration: none;">
+                        <i class="fas fa-bullhorn" style="margin-right: 0.5rem;"></i>
+                        Get Started
                     </a>
                 </div>
+
+                <!-- Sponsored Content -->
+                <div class="apple-liquid-card sound-wave" style="padding: 3rem; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                        <div class="apple-ethereal" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-file-alt" style="font-size: 1.5rem; color: var(--accent-cyan);"></i>
+                        </div>
+                        <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">Sponsored Content</h3>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">
+                        Native advertising that seamlessly integrates with our editorial content while maintaining transparency.
+                    </p>
+                    <div class="features-list" style="margin-bottom: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-cyan); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Thought leadership articles</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-cyan); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Industry insights and analysis</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-cyan); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Product announcements</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-cyan); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Expert commentary</span>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <div style="color: var(--accent-cyan); font-size: 2rem; font-weight: 800;">$1,500</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">per article</div>
+                    </div>
+                    <a href="mailto:ad13dtu@gmail.com?subject=Sponsored Content Inquiry" class="apple-liquid-btn sound-bubble" style="width: 100%; padding: 1rem; text-align: center; display: block; text-decoration: none;">
+                        <i class="fas fa-pen-nib" style="margin-right: 0.5rem;"></i>
+                        Create Content
+                    </a>
+                </div>
+
+                <!-- Newsletter Sponsorship -->
+                <div class="apple-liquid-card sound-wave" style="padding: 3rem; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                        <div class="apple-prism" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-envelope-open-text" style="font-size: 1.5rem; color: var(--accent-emerald);"></i>
+                        </div>
+                        <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">Newsletter Sponsorship</h3>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">
+                        Direct access to our subscriber base with dedicated newsletter placements.
+                    </p>
+                    <div class="features-list" style="margin-bottom: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-emerald); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Header/footer placement</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-emerald); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Dedicated sponsor section</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-emerald); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Weekly or monthly campaigns</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-check" style="color: var(--accent-emerald); font-size: 0.9rem;"></i>
+                            <span style="color: var(--text-secondary);">Performance analytics</span>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <div style="color: var(--accent-emerald); font-size: 2rem; font-weight: 800;">$750</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">per send</div>
+                    </div>
+                    <a href="mailto:ad13dtu@gmail.com?subject=Newsletter Sponsorship Inquiry" class="apple-liquid-btn sound-bubble" style="width: 100%; padding: 1rem; text-align: center; display: block; text-decoration: none;">
+                        <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                        Sponsor Newsletter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="apple-liquid-card" style="padding: 3rem; margin-bottom: 3rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; justify-content: center;">
+                    <div class="apple-iridescent" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-star" style="font-size: 1.5rem; color: var(--accent-violet);"></i>
+                    </div>
+                    <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0;">Why Partner with zyro.news?</h3>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div style="text-align: center;">
+                        <div class="apple-quantum" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-users" style="font-size: 1.5rem; color: var(--accent-blue);"></i>
+                        </div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Quality Audience</h4>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Our readers are professionals, decision-makers, and engaged citizens who value credible news sources.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="apple-ethereal" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-chart-line" style="font-size: 1.5rem; color: var(--accent-cyan);"></i>
+                        </div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Detailed Analytics</h4>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Comprehensive reporting on impressions, clicks, engagement, and conversion metrics for all campaigns.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="apple-prism" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-handshake" style="font-size: 1.5rem; color: var(--accent-emerald);"></i>
+                        </div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.2rem;">Custom Solutions</h4>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Tailored advertising packages designed to meet your specific business objectives and budget.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="mailto:ad13dtu@gmail.com?subject=Advertising Partnership Inquiry" class="apple-liquid-btn sound-bubble" style="padding: 1.25rem 3rem; font-size: 1.1rem; font-weight: 600;">
+                    <i class="fas fa-rocket" style="margin-right: 0.75rem;"></i>
+                    Start Your Campaign
+                </a>
+            </div>
+
+            <!-- Back to Home -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="/" class="apple-liquid-btn sound-bubble" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+                    <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+                    Back to Home
+                </a>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -256,5 +475,7 @@
         updateTime();
         setInterval(updateTime, 1000);
     </script>
+    
+    <script src="apple-sound-system.js"></script>
 </body>
 </html>

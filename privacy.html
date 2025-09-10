@@ -1,179 +1,650 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy - zyro.news</title>
+    <meta name="description" content="Privacy policy for zyro.news - Learn how we collect, use, and protect your personal information." />
+    <meta name="keywords" content="privacy, policy, zyro.news, data protection, personal information, GDPR" />
+    <meta name="author" content="zyro.news" />
+    <link rel="canonical" href="https://zyro.news/privacy.html" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Privacy Policy - zyro.news" />
+    <meta property="og:description" content="Privacy policy for zyro.news - Learn how we collect, use, and protect your personal information." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zyro.news/privacy.html" />
+    <meta property="og:site_name" content="zyro.news" />
+    
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <style>
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem !important;
+            }
+            
+            main.container {
+                padding: 2rem 1rem !important;
+                max-width: 100% !important;
+            }
+            
+            .apple-liquid-card {
+                padding: 1.5rem !important;
+                margin: 1rem 0 !important;
+            }
+            
+            .section-header {
+                margin-bottom: 2rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem !important;
+            }
+            
+            /* Privacy sections mobile */
+            .privacy-section {
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Card headers mobile */
+            .apple-liquid-card h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            /* Sub-headers mobile */
+            .privacy-subsection h4 {
+                font-size: 1.1rem !important;
+            }
+            
+            /* Icon sizes mobile */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 45px !important;
+                height: 45px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1.1rem !important;
+            }
+            
+            /* List items mobile */
+            .privacy-list {
+                gap: 0.5rem !important;
+            }
+            
+            .privacy-list > div {
+                gap: 0.5rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            .privacy-list span,
+            .privacy-list div {
+                font-size: 0.95rem !important;
+                line-height: 1.5 !important;
+            }
+            
+            /* Rights list mobile */
+            .rights-list {
+                gap: 0.75rem !important;
+            }
+            
+            .rights-list > div {
+                gap: 0.5rem !important;
+            }
+            
+            /* Warning/info boxes mobile */
+            .warning-box,
+            .info-box {
+                padding: 1rem !important;
+                margin: 1rem 0 !important;
+            }
+            
+            .warning-box p,
+            .info-box p {
+                margin: 0.5rem 0 0 1rem !important;
+                font-size: 0.95rem !important;
+            }
+            
+            /* Button mobile */
+            .apple-liquid-btn {
+                padding: 0.875rem 1.5rem !important;
+                font-size: 0.95rem !important;
+                width: 100% !important;
+                text-align: center !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            /* Hero section mobile */
+            .hero-content h1 {
+                font-size: 2rem !important;
+            }
+            
+            .hero-content p {
+                font-size: 1rem !important;
+            }
+            
+            /* Text content mobile */
+            .apple-liquid-card p {
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+            }
+            
+            /* Button container mobile */
+            .button-container {
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .apple-liquid-card {
+                padding: 1rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.6rem !important;
+            }
+            
+            .apple-liquid-card h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            .privacy-subsection h4 {
+                font-size: 1rem !important;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            /* Text smaller on very small screens */
+            .apple-liquid-card p {
+                font-size: 0.95rem !important;
+            }
+            
+            .privacy-list span,
+            .privacy-list div {
+                font-size: 0.9rem !important;
+            }
+            
+            /* Icon sizes smaller */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 40px !important;
+                height: 40px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1rem !important;
+            }
+            
+            /* Warning/info boxes smaller */
+            .warning-box p,
+            .info-box p {
+                font-size: 0.9rem !important;
+            }
+            
+            /* Rights list smaller text */
+            .rights-list div strong {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
   </head>
   <body>
-    <header>
+    <!-- Header -->
+    <header role="banner" itemscope itemtype="https://schema.org/WPHeader">
       <div class="container">
-        <h1><a href="/" style="color: white; text-decoration: none;">zyro.news</a></h1>
-        <p>Privacy Policy</p>
+        <div class="header-content">
+          <div class="logo" itemscope itemtype="https://schema.org/Organization">
+            <h1 itemprop="name"><a href="/" style="color: inherit; text-decoration: none;" itemprop="url">zyro.news</a></h1>
+          </div>
+          <nav class="header-nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-time" id="currentTime"></div>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="container policy-content">
-      <h2>Privacy Policy</h2>
-      <p><strong>Last updated:</strong> January 2025</p>
-
-      <section>
-        <h3>1. Information We Collect</h3>
-        
-        <h4>Information You Provide</h4>
-        <ul>
-          <li>Contact information when you reach out to us</li>
-          <li>Feedback and communications you send to us</li>
-        </ul>
-        
-        <h4>Information Automatically Collected</h4>
-        <ul>
-          <li>Usage data (pages visited, time spent, search queries)</li>
-          <li>Device information (browser type, operating system, IP address)</li>
-          <li>Cookies and similar tracking technologies</li>
-          <li>Log files and analytics data</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>2. How We Use Your Information</h3>
-        <p>We use the information we collect to:</p>
-        <ul>
-          <li>Provide and improve our news aggregation service</li>
-          <li>Analyze website usage and optimize user experience</li>
-          <li>Respond to your inquiries and provide customer support</li>
-          <li>Prevent fraud and ensure website security</li>
-          <li>Comply with legal obligations</li>
-          <li>Send important updates about our service</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>3. Information Sharing</h3>
-        <p>We do not sell, trade, or rent your personal information. We may share information in the following circumstances:</p>
-        <ul>
-          <li><strong>Service Providers:</strong> With third-party services that help us operate our website</li>
-          <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
-          <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale</li>
-          <li><strong>Consent:</strong> When you have given us explicit permission</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>4. Third-Party Services</h3>
-        <p>Our website may use third-party services including:</p>
-        <ul>
-          <li><strong>Google Analytics:</strong> For website analytics and performance monitoring</li>
-          <li><strong>News APIs:</strong> For aggregating news content from various sources</li>
-          <li><strong>CDNs:</strong> For improved website performance and speed</li>
-          <li><strong>Social Media:</strong> For social sharing functionality</li>
-        </ul>
-        <p>These services have their own privacy policies that govern how they collect and use data.</p>
-      </section>
-
-      <section>
-        <h3>5. Data Security</h3>
-        <p>We implement appropriate technical and organizational measures to protect your information:</p>
-        <ul>
-          <li>Encryption of data in transit and at rest</li>
-          <li>Regular security assessments and updates</li>
-          <li>Access controls and authentication measures</li>
-          <li>Secure hosting and infrastructure</li>
-        </ul>
-        <p>However, no internet transmission is completely secure, and we cannot guarantee absolute security.</p>
-      </section>
-
-      <section>
-        <h3>6. Data Retention</h3>
-        <p>We retain information for as long as necessary to:</p>
-        <ul>
-          <li>Provide our services to you</li>
-          <li>Comply with legal obligations</li>
-          <li>Resolve disputes and enforce agreements</li>
-          <li>Improve our services and user experience</li>
-        </ul>
-        <p>Analytics data is typically retained for 24 months unless otherwise specified.</p>
-      </section>
-
-      <section>
-        <h3>7. Your Rights</h3>
-        <p>Depending on your location, you may have certain rights regarding your personal information:</p>
-        <ul>
-          <li><strong>Access:</strong> Request access to your personal information</li>
-          <li><strong>Correction:</strong> Request correction of inaccurate information</li>
-          <li><strong>Deletion:</strong> Request deletion of your personal information</li>
-          <li><strong>Portability:</strong> Request transfer of your data</li>
-          <li><strong>Objection:</strong> Object to certain processing activities</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>8. Cookies and Tracking</h3>
-        <p>We use cookies and similar technologies to enhance your experience. For detailed information about our use of cookies, please see our <a href="/cookies.html">Cookie Policy</a>.</p>
-      </section>
-
-      <section>
-        <h3>9. Children's Privacy</h3>
-        <p>Our service is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it promptly.</p>
-      </section>
-
-      <section>
-        <h3>10. International Transfers</h3>
-        <p>Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers in accordance with applicable data protection laws.</p>
-      </section>
-
-      <section>
-        <h3>11. Changes to This Policy</h3>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the "Last updated" date. Your continued use of the service after such changes constitutes acceptance of the new policy.</p>
-      </section>
-
-      <section>
-        <h3>12. Contact Information</h3>
-        <p>If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us:</p>
-        <ul>
-          <li>Email: <a href="mailto:ad13dtu@gmail.com">ad13dtu@gmail.com</a></li>
-          <li>Website: <a href="https://zyro.news">zyro.news</a></li>
-        </ul>
-      </section>
-    </main>
-
-    <section class="contact-section">
+    <!-- Hero Section -->
+    <section class="hero-section" role="banner">
       <div class="container">
-        <h3>Connect with Us</h3>
-        <div class="social-icons">
-          <a href="https://github.com/apoorvdarshan" target="_blank" rel="noopener noreferrer" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/apoorvdarshan" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://youtube.com/@apoorvdarshan" target="_blank" rel="noopener noreferrer" title="YouTube">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="https://instagram.com/apoorvdarshan" target="_blank" rel="noopener noreferrer" title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://twitter.com/apoorvdarshan" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
-            <span class="x-icon">𝕏</span>
-          </a>
-          <a href="mailto:ad13dtu@gmail.com" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
+        <div class="hero-content">
+          <h1>Privacy Policy</h1>
+          <p>How we collect, use, and protect your personal information</p>
         </div>
       </div>
     </section>
 
-    <footer>
+    <!-- Main Content -->
+    <main role="main" class="container" style="padding: 4rem 2rem; max-width: 1000px;">
+      <div class="apple-liquid-card" style="padding: 4rem; margin: 2rem 0;">
+        <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+          <h2 class="section-title">Privacy Policy</h2>
+          <p class="section-subtitle">Last updated: January 2025</p>
+        </div>
+
+        <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+              <div class="apple-quantum" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-database" style="font-size: 1.2rem; color: var(--accent-blue);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">1. Information We Collect</h3>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                <i class="fas fa-user" style="color: var(--accent-blue); font-size: 1rem;"></i>
+                <h4 style="color: var(--text-primary); font-size: 1.2rem; margin: 0;">Information You Provide</h4>
+              </div>
+              <div style="display: grid; gap: 0.5rem; padding-left: 1.75rem;">
+                <div style="display: flex; align-items: start; gap: 0.75rem;">
+                  <i class="fas fa-dot-circle" style="color: var(--accent-blue); margin-top: 0.2rem; font-size: 0.6rem;"></i>
+                  <span>Contact information when you reach out to us</span>
+                </div>
+                <div style="display: flex; align-items: start; gap: 0.75rem;">
+                  <i class="fas fa-dot-circle" style="color: var(--accent-blue); margin-top: 0.2rem; font-size: 0.6rem;"></i>
+                  <span>Feedback and communications you send to us</span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                <i class="fas fa-robot" style="color: var(--accent-cyan); font-size: 1rem;"></i>
+                <h4 style="color: var(--text-primary); font-size: 1.2rem; margin: 0;">Information Automatically Collected</h4>
+              </div>
+              <div style="display: grid; gap: 0.5rem; padding-left: 1.75rem;">
+                <div style="display: flex; align-items: start; gap: 0.75rem;">
+                  <i class="fas fa-dot-circle" style="color: var(--accent-cyan); margin-top: 0.2rem; font-size: 0.6rem;"></i>
+                  <span>Usage data (pages visited, time spent, search queries)</span>
+                </div>
+                <div style="display: flex; align-items: start; gap: 0.75rem;">
+                  <i class="fas fa-dot-circle" style="color: var(--accent-cyan); margin-top: 0.2rem; font-size: 0.6rem;"></i>
+                  <span>Device information (browser type, operating system, IP address)</span>
+                </div>
+                <div style="display: flex; align-items: start; gap: 0.75rem;">
+                  <i class="fas fa-dot-circle" style="color: var(--accent-cyan); margin-top: 0.2rem; font-size: 0.6rem;"></i>
+                  <span>Cookies and similar tracking technologies</span>
+                </div>
+                <div style="display: flex; align-items: start; gap: 0.75rem;">
+                  <i class="fas fa-dot-circle" style="color: var(--accent-cyan); margin-top: 0.2rem; font-size: 0.6rem;"></i>
+                  <span>Log files and analytics data</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-ethereal" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-cogs" style="font-size: 1.2rem; color: var(--accent-emerald);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">2. How We Use Your Information</h3>
+            </div>
+            <p style="margin-bottom: 1.5rem;">We use the information we collect to:</p>
+            <div style="display: grid; gap: 0.75rem;">
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent-emerald); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Provide and improve our news aggregation service</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent-emerald); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Analyze website usage and optimize user experience</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent-emerald); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Respond to your inquiries and provide customer support</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent-emerald); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Prevent fraud and ensure website security</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent-emerald); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Comply with legal obligations</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent-emerald); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Send important updates about our service</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-prism" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-share-alt" style="font-size: 1.2rem; color: var(--accent-violet);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">3. Information Sharing</h3>
+            </div>
+            <p style="margin-bottom: 1.5rem;">We do not sell, trade, or rent your personal information. We may share information in the following circumstances:</p>
+            <div style="display: grid; gap: 1rem;">
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-tools" style="color: var(--accent-violet); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Service Providers:</strong> With third-party services that help us operate our website</div>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-balance-scale" style="color: var(--accent-violet); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Legal Requirements:</strong> When required by law or to protect our rights</div>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-handshake" style="color: var(--accent-violet); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale</div>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-user-check" style="color: var(--accent-violet); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Consent:</strong> When you have given us explicit permission</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-iridescent" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-plug" style="font-size: 1.2rem; color: var(--accent-orange);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">4. Third-Party Services</h3>
+            </div>
+            <p style="margin-bottom: 1.5rem;">Our website may use third-party services including:</p>
+            <div style="display: grid; gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fab fa-google" style="color: var(--accent-orange); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Google Analytics:</strong> For website analytics and performance monitoring</div>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-newspaper" style="color: var(--accent-orange); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>News APIs:</strong> For aggregating news content from various sources</div>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-cloud" style="color: var(--accent-orange); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>CDNs:</strong> For improved website performance and speed</div>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-share-square" style="color: var(--accent-orange); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Social Media:</strong> For social sharing functionality</div>
+              </div>
+            </div>
+            <p style="margin: 0;">These services have their own privacy policies that govern how they collect and use data.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-quantum" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-shield-alt" style="font-size: 1.2rem; color: var(--accent-red);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">5. Data Security</h3>
+            </div>
+            <p style="margin-bottom: 1.5rem;">We implement appropriate technical and organizational measures to protect your information:</p>
+            <div style="display: grid; gap: 0.75rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-lock" style="color: var(--accent-red); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Encryption of data in transit and at rest</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-sync-alt" style="color: var(--accent-red); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Regular security assessments and updates</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-key" style="color: var(--accent-red); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Access controls and authentication measures</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-server" style="color: var(--accent-red); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Secure hosting and infrastructure</span>
+              </div>
+            </div>
+            <div style="background: var(--warning-bg, rgba(255, 193, 7, 0.1)); border: 1px solid var(--warning-color, #ffc107); border-radius: 8px; padding: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fas fa-exclamation-triangle" style="color: var(--warning-color, #ffc107); font-size: 0.9rem;"></i>
+                <strong style="color: var(--text-primary);">Note:</strong>
+              </div>
+              <p style="margin: 0.5rem 0 0 1.25rem; color: var(--text-secondary);">However, no internet transmission is completely secure, and we cannot guarantee absolute security.</p>
+            </div>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-ethereal" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-clock" style="font-size: 1.2rem; color: var(--accent-teal);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">6. Data Retention</h3>
+            </div>
+            <p style="margin-bottom: 1.5rem;">We retain information for as long as necessary to:</p>
+            <div style="display: grid; gap: 0.75rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent-teal); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Provide our services to you</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent-teal); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Comply with legal obligations</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent-teal); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Resolve disputes and enforce agreements</span>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent-teal); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <span>Improve our services and user experience</span>
+              </div>
+            </div>
+            <div style="background: var(--info-bg, rgba(13, 202, 240, 0.1)); border: 1px solid var(--info-color, #0dcaf0); border-radius: 8px; padding: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fas fa-info-circle" style="color: var(--info-color, #0dcaf0); font-size: 0.9rem;"></i>
+                <strong style="color: var(--text-primary);">Info:</strong>
+              </div>
+              <p style="margin: 0.5rem 0 0 1.25rem; color: var(--text-secondary);">Analytics data is typically retained for 24 months unless otherwise specified.</p>
+            </div>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-prism" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-user-cog" style="font-size: 1.2rem; color: var(--accent-indigo);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">7. Your Rights</h3>
+            </div>
+            <p style="margin-bottom: 1.5rem;">Depending on your location, you may have certain rights regarding your personal information:</p>
+            <div style="display: grid; gap: 1rem;">
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-eye" style="color: var(--accent-indigo); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Access:</strong> Request access to your personal information</div>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-edit" style="color: var(--accent-indigo); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Correction:</strong> Request correction of inaccurate information</div>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-trash-alt" style="color: var(--accent-indigo); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Deletion:</strong> Request deletion of your personal information</div>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-download" style="color: var(--accent-indigo); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Portability:</strong> Request transfer of your data</div>
+              </div>
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-ban" style="color: var(--accent-indigo); margin-top: 0.2rem; font-size: 0.9rem;"></i>
+                <div><strong>Objection:</strong> Object to certain processing activities</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-iridescent" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-cookie-bite" style="font-size: 1.2rem; color: var(--accent-purple);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">8. Cookies and Tracking</h3>
+            </div>
+            <p style="margin-bottom: 1rem;">We use cookies and similar technologies to enhance your experience. For detailed information about our use of cookies, please see our <a href="/cookies.html" style="color: var(--accent-purple); text-decoration: none;">Cookie Policy</a>.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-quantum" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-child" style="font-size: 1.2rem; color: var(--accent-pink);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">9. Children's Privacy</h3>
+            </div>
+            <p style="margin: 0;">Our service is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it promptly.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-ethereal" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-globe-americas" style="font-size: 1.2rem; color: var(--accent-green);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">10. International Transfers</h3>
+            </div>
+            <p style="margin: 0;">Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers in accordance with applicable data protection laws.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-prism" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-sync-alt" style="font-size: 1.2rem; color: var(--accent-yellow);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">11. Changes to This Policy</h3>
+            </div>
+            <p style="margin: 0;">We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the "Last updated" date. Your continued use of the service after such changes constitutes acceptance of the new policy.</p>
+          </div>
+
+          <div class="apple-liquid-card" style="padding: 2.5rem; margin-bottom: 3rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="apple-iridescent" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-envelope" style="font-size: 1.2rem; color: var(--accent-blue);"></i>
+              </div>
+              <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">12. Contact Information</h3>
+            </div>
+            <p style="margin-bottom: 1.5rem;">If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+              <a href="mailto:ad13dtu@gmail.com" class="apple-liquid-btn sound-bubble" style="display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; font-size: 1rem; text-decoration: none;">
+                <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                ad13dtu@gmail.com
+              </a>
+              <a href="https://zyro.news" class="apple-liquid-btn sound-bubble" style="display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; font-size: 1rem; text-decoration: none;">
+                <i class="fas fa-globe" style="margin-right: 0.5rem;"></i>
+                zyro.news
+              </a>
+            </div>
+          </div>
+
+          <!-- Back to Home -->
+          <div style="text-align: center; margin: 2rem 0;">
+            <a href="/" class="apple-liquid-btn sound-bubble" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+              <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+              Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
       <div class="container">
-        <p>&copy; 2025 zyro.news</p>
-        <div class="footer-links">
-          <a href="/terms.html">Terms</a>
-          <a href="/privacy.html">Privacy</a>
-          <a href="/cookies.html">Cookies</a>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>News</h4>
+            <div class="footer-links">
+              <a href="/#general">Breaking News</a>
+              <a href="/#world">World News</a>
+              <a href="/#politics">Politics</a>
+              <a href="/#business">Business</a>
+              <a href="/#technology">Technology</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Sections</h4>
+            <div class="footer-links">
+              <a href="/#sports">Sports</a>
+              <a href="/#entertainment">Entertainment</a>
+              <a href="/#science">Science</a>
+              <a href="/#health">Health</a>
+              <a href="/#opinion">Opinion</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>About</h4>
+            <div class="footer-links">
+              <a href="about.html">About Us</a>
+              <a href="careers.html">Careers</a>
+              <a href="contact.html">Contact</a>
+              <a href="advertise.html">Advertise with us</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Get the latest news delivered to your inbox</p>
+            <div class="newsletter">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookies.html">Cookie Policy</a>
+          </div>
+          <div class="copyright">
+            © 2025 zyro.news. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
+
+    <script>
+      // Multi-timezone time display for header (matching index.html)
+      function updateTime() {
+        const now = new Date();
+        
+        // Multiple time zones
+        const timeZones = [
+          { label: 'NYC', zone: 'America/New_York' },
+          { label: 'LON', zone: 'Europe/London' },
+          { label: 'TYO', zone: 'Asia/Tokyo' },
+          { label: 'SYD', zone: 'Australia/Sydney' }
+        ];
+        
+        const times = timeZones.map(tz => {
+          const time = now.toLocaleTimeString('en-US', {
+            timeZone: tz.zone,
+            hour12: false,
+            hour: '2-digit',
+            minute: '2-digit'
+          });
+          return `${tz.label} ${time}`;
+        });
+        
+        const dateString = now.toLocaleDateString('en-US', {
+          weekday: 'short',
+          month: 'short',
+          day: 'numeric'
+        });
+        
+        const timeElement = document.getElementById('currentTime');
+        if (timeElement) {
+          timeElement.textContent = `${dateString} | ${times.join(' | ')}`;
+        }
+      }
+      
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+    
+    <script src="apple-sound-system.js"></script>
   </body>
 </html>

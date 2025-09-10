@@ -1,60 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - zyro.news</title>
     <meta name="description" content="Learn about zyro.news - Your premier source for global news and digital journalism.">
+    <meta name="keywords" content="zyro.news, about us, digital journalism, news aggregation, mission, vision">
+    <meta name="author" content="zyro.news">
+    <link rel="canonical" href="https://zyro.news/about.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Us - zyro.news">
+    <meta property="og:description" content="Learn about zyro.news - Your premier source for global news and digital journalism.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zyro.news/about.html">
+    <meta property="og:site_name" content="zyro.news">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            /* Container and padding adjustments */
+            .container {
+                padding: 0 1rem !important;
+            }
+            
+            /* Main content mobile fixes */
+            main.container {
+                padding: 2rem 1rem !important;
+                max-width: 100% !important;
+            }
+            
+            /* Apple liquid card mobile responsive */
+            .apple-liquid-card {
+                padding: 1.5rem !important;
+                margin: 1rem 0 !important;
+            }
+            
+            /* Section header mobile */
+            .section-header {
+                margin-bottom: 2rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem !important;
+            }
+            
+            /* Content grid mobile */
+            .content-grid {
+                gap: 1.5rem !important;
+            }
+            
+            /* Card headers mobile */
+            .apple-liquid-card h3 {
+                font-size: 1.4rem !important;
+            }
+            
+            /* Features grid mobile */
+            .features-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            /* Icon sizes mobile */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 50px !important;
+                height: 50px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1.2rem !important;
+            }
+            
+            /* Text size adjustments */
+            .content-grid {
+                font-size: 1rem !important;
+            }
+            
+            /* Hero section mobile */
+            .hero-content h1 {
+                font-size: 2rem !important;
+            }
+            
+            .hero-content p {
+                font-size: 1rem !important;
+            }
+            
+            /* Button mobile */
+            .apple-liquid-btn {
+                padding: 0.75rem 1.5rem !important;
+                font-size: 0.9rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Extra small mobile adjustments */
+            .apple-liquid-card {
+                padding: 1rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.6rem !important;
+            }
+            
+            .apple-liquid-card h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            /* Header flex direction for very small screens */
+            .apple-liquid-card > div:first-child {
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 0.5rem !important;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header role="banner" itemscope itemtype="https://schema.org/WPHeader">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <h1><a href="/" style="color: inherit; text-decoration: none;">zyro.news</a></h1>
+                <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                    <h1 itemprop="name"><a href="/" style="color: inherit; text-decoration: none;" itemprop="url">zyro.news</a></h1>
                 </div>
-                <nav class="header-nav">
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
                     <div class="nav-time" id="currentTime"></div>
                 </nav>
             </div>
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero-section" role="banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1>About zyro.news</h1>
+                <p>Learn about our mission to revolutionize digital journalism</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <main class="container" style="padding: 4rem 2rem; max-width: 800px;">
-        <div style="background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius-large); padding: 3rem; margin-top: 2rem;">
-            <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 2rem; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">About Us</h1>
+    <main role="main" class="container" style="padding: 4rem 2rem; max-width: 1000px;">
+        <div class="apple-liquid-card" style="padding: 4rem; margin: 2rem 0;">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2 class="section-title">Our Story</h2>
+                <p class="section-subtitle">Pioneering the future of digital journalism</p>
+            </div>
             
-            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
-                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">Welcome to zyro.news</h2>
-                <p style="margin-bottom: 1.5rem;">
-                    zyro.news represents the future of digital journalism, where cutting-edge technology meets human insight to deliver the most relevant and timely news from around the globe. We are committed to providing our readers with accurate, unbiased, and comprehensive coverage of the stories that matter most.
-                </p>
+            <div class="content-grid" style="display: grid; gap: 3rem; color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
+                
+                <!-- Mission Card -->
+                <div class="apple-liquid-card" style="padding: 2.5rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="apple-quantum" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-bullseye" style="font-size: 1.5rem; color: var(--accent-blue);"></i>
+                        </div>
+                        <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0;">Our Mission</h3>
+                    </div>
+                    <p style="margin-bottom: 1rem;">
+                        To democratize access to quality journalism by leveraging advanced technology and data-driven insights. We believe that everyone deserves access to reliable news that helps them make informed decisions about their world.
+                    </p>
+                </div>
 
-                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">Our Mission</h2>
-                <p style="margin-bottom: 1.5rem;">
-                    To democratize access to quality journalism by leveraging advanced technology and data-driven insights. We believe that everyone deserves access to reliable news that helps them make informed decisions about their world.
-                </p>
+                <!-- Vision Card -->
+                <div class="apple-liquid-card" style="padding: 2.5rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="apple-ethereal" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-eye" style="font-size: 1.5rem; color: var(--accent-cyan);"></i>
+                        </div>
+                        <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0;">Our Vision</h3>
+                    </div>
+                    <p style="margin-bottom: 1rem;">
+                        We envision a world where quality journalism is accessible to everyone, where technology enhances rather than replaces human judgment, and where readers can trust that the news they consume is accurate, relevant, and presented without bias.
+                    </p>
+                </div>
 
-                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">What Makes Us Different</h2>
-                <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem;">
-                    <li style="margin-bottom: 0.5rem;">Real-time global news aggregation from trusted sources</li>
-                    <li style="margin-bottom: 0.5rem;">Advanced filtering and categorization technology</li>
-                    <li style="margin-bottom: 0.5rem;">Clean, modern interface designed for optimal reading experience</li>
-                    <li style="margin-bottom: 0.5rem;">Mobile-first approach ensuring accessibility across all devices</li>
-                    <li style="margin-bottom: 0.5rem;">Commitment to journalistic integrity and fact-based reporting</li>
-                </ul>
+                <!-- Features Grid -->
+                <div class="apple-liquid-card" style="padding: 2.5rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                        <div class="apple-prism" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-star" style="font-size: 1.5rem; color: var(--accent-violet);"></i>
+                        </div>
+                        <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0;">What Makes Us Different</h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                        <div class="feature-item">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                <i class="fas fa-globe-americas" style="color: var(--accent-blue);"></i>
+                                <span style="font-weight: 600; color: var(--text-primary);">Global Coverage</span>
+                            </div>
+                            <p style="margin: 0; font-size: 1rem; opacity: 0.9;">Real-time global news aggregation from trusted sources</p>
+                        </div>
+                        <div class="feature-item">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                <i class="fas fa-microchip" style="color: var(--accent-cyan);"></i>
+                                <span style="font-weight: 600; color: var(--text-primary);">Smart Technology</span>
+                            </div>
+                            <p style="margin: 0; font-size: 1rem; opacity: 0.9;">Advanced filtering and categorization technology</p>
+                        </div>
+                        <div class="feature-item">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                <i class="fas fa-mobile-alt" style="color: var(--accent-emerald);"></i>
+                                <span style="font-weight: 600; color: var(--text-primary);">Mobile First</span>
+                            </div>
+                            <p style="margin: 0; font-size: 1rem; opacity: 0.9;">Mobile-first approach ensuring accessibility across all devices</p>
+                        </div>
+                        <div class="feature-item">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                <i class="fas fa-shield-alt" style="color: var(--accent-violet);"></i>
+                                <span style="font-weight: 600; color: var(--text-primary);">Integrity First</span>
+                            </div>
+                            <p style="margin: 0; font-size: 1rem; opacity: 0.9;">Commitment to journalistic integrity and fact-based reporting</p>
+                        </div>
+                    </div>
+                </div>
 
-                <h2 style="color: var(--text-primary); font-size: 1.5rem; margin: 2rem 0 1rem;">Our Vision</h2>
-                <p style="margin-bottom: 1.5rem;">
-                    We envision a world where quality journalism is accessible to everyone, where technology enhances rather than replaces human judgment, and where readers can trust that the news they consume is accurate, relevant, and presented without bias.
-                </p>
-
-                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
-                    <a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--gradient-accent); color: white; text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
+                <!-- CTA Section -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="/" class="apple-liquid-btn sound-bubble" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+                        <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
                         Back to Home
                     </a>
                 </div>
@@ -63,7 +239,7 @@
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -159,5 +335,7 @@
         updateTime();
         setInterval(updateTime, 1000);
     </script>
+    
+    <script src="apple-sound-system.js"></script>
 </body>
 </html>

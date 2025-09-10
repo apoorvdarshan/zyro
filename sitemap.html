@@ -1,237 +1,353 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap - zyro.news</title>
     <meta name="description" content="Complete sitemap for zyro.news - Find all pages and sections of our news website.">
+    <meta name="keywords" content="sitemap, zyro.news, navigation, site structure, pages, sections">
+    <meta name="author" content="zyro.news">
+    <link rel="canonical" href="https://zyro.news/sitemap.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sitemap - zyro.news">
+    <meta property="og:description" content="Complete sitemap for zyro.news - Find all pages and sections of our news website.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zyro.news/sitemap.html">
+    <meta property="og:site_name" content="zyro.news">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem !important;
+            }
+            
+            main.container {
+                padding: 2rem 1rem !important;
+                max-width: 100% !important;
+            }
+            
+            .apple-liquid-card {
+                padding: 1.5rem !important;
+                margin: 1rem 0 !important;
+            }
+            
+            .section-header {
+                margin-bottom: 2rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem !important;
+            }
+            
+            /* Site structure grid mobile - single column */
+            .site-structure {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Navigation link cards mobile */
+            .nav-link {
+                padding: 1rem 0 !important;
+                font-size: 0.95rem !important;
+            }
+            
+            .nav-link i {
+                width: 18px !important;
+                font-size: 1rem !important;
+            }
+            
+            /* Card headers mobile */
+            .apple-liquid-card h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            /* Icon sizes mobile */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 50px !important;
+                height: 50px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1.2rem !important;
+            }
+            
+            /* Quick navigation mobile */
+            .quick-nav-buttons {
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+            }
+            
+            /* Button mobile */
+            .apple-liquid-btn {
+                padding: 0.875rem 1.5rem !important;
+                font-size: 0.95rem !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            
+            /* Hero section mobile */
+            .hero-content h1 {
+                font-size: 2rem !important;
+            }
+            
+            .hero-content p {
+                font-size: 1rem !important;
+            }
+            
+            /* Links list mobile */
+            .links-list {
+                margin-bottom: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .apple-liquid-card {
+                padding: 1rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.6rem !important;
+            }
+            
+            .apple-liquid-card h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem !important;
+            }
+            
+            /* Navigation links smaller */
+            .nav-link {
+                padding: 0.75rem 0 !important;
+                font-size: 0.9rem !important;
+            }
+            
+            .nav-link span {
+                font-size: 0.9rem !important;
+            }
+            
+            /* Icon sizes smaller */
+            .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
+                width: 45px !important;
+                height: 45px !important;
+            }
+            
+            .apple-quantum i, .apple-ethereal i, .apple-prism i, .apple-iridescent i {
+                font-size: 1.1rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header role="banner" itemscope itemtype="https://schema.org/WPHeader">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <h1><a href="/" style="color: inherit; text-decoration: none;">zyro.news</a></h1>
+                <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                    <h1 itemprop="name"><a href="/" style="color: inherit; text-decoration: none;" itemprop="url">zyro.news</a></h1>
                 </div>
-                <nav class="header-nav">
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
                     <div class="nav-time" id="currentTime"></div>
                 </nav>
             </div>
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero-section" role="banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Site Navigation</h1>
+                <p>Complete overview of all pages and sections on zyro.news</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <main class="container" style="padding: 4rem 2rem; max-width: 1000px;">
-        <div style="background: var(--background-glass); border: 1px solid var(--border-subtle); border-radius: var(--border-radius-large); padding: 3rem; margin-top: 2rem;">
-            <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 2rem; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Sitemap</h1>
-            
-            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
-                <p style="margin-bottom: 3rem; font-size: 1.2rem;">
-                    Navigate through all pages and sections of zyro.news. Find exactly what you're looking for with our complete site structure.
-                </p>
+    <main role="main" class="container" style="padding: 4rem 2rem; max-width: 1100px;">
+        <div class="apple-liquid-card" style="padding: 4rem; margin: 2rem 0;">
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title">Site Structure</h2>
+                <p class="section-subtitle">Navigate through all pages and sections of zyro.news</p>
+            </div>
 
-                <!-- Site Structure -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    
-                    <!-- Main Pages -->
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="color: var(--accent-blue); font-size: 1.5rem;">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <h2 style="color: var(--text-primary); margin: 0;">Main Pages</h2>
+            <!-- Site Structure -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                
+                <!-- Main Pages -->
+                <div class="apple-liquid-card sound-wave" style="padding: 2.5rem; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                        <div class="apple-quantum" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-home" style="font-size: 1.5rem; color: var(--accent-blue);"></i>
                         </div>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-blue);"></i>
-                                    Home Page
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="about.html" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-blue);"></i>
-                                    About Us
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="careers.html" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-blue);"></i>
-                                    Careers
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="contact.html" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-blue);"></i>
-                                    Contact
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="advertise.html" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-blue);"></i>
-                                    Advertise with us
-                                </a>
-                            </li>
-                        </ul>
+                        <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">Main Pages</h3>
                     </div>
-
-                    <!-- News Categories -->
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="color: var(--accent-cyan); font-size: 1.5rem;">
-                                <i class="fas fa-newspaper"></i>
-                            </div>
-                            <h2 style="color: var(--text-primary); margin: 0;">News Categories</h2>
-                        </div>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/#general" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-cyan);"></i>
-                                    Breaking News
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/#world" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-cyan);"></i>
-                                    World News
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/#politics" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-cyan);"></i>
-                                    Politics
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/#business" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-cyan);"></i>
-                                    Business
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/#technology" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-cyan);"></i>
-                                    Technology
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- News Sections -->
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="color: var(--accent-emerald); font-size: 1.5rem;">
-                                <i class="fas fa-th-large"></i>
-                            </div>
-                            <h2 style="color: var(--text-primary); margin: 0;">Sections</h2>
-                        </div>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/#sports" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-emerald);"></i>
-                                    Sports
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/#entertainment" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-emerald);"></i>
-                                    Entertainment
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/#science" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-emerald);"></i>
-                                    Science
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/#health" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-emerald);"></i>
-                                    Health
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="/#opinion" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-emerald);"></i>
-                                    Opinion
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Legal Pages -->
-                    <div style="background: var(--primary-dark); border: 1px solid var(--border-subtle); border-radius: var(--border-radius); padding: 2rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div style="color: var(--accent-orange); font-size: 1.5rem;">
-                                <i class="fas fa-file-contract"></i>
-                            </div>
-                            <h2 style="color: var(--text-primary); margin: 0;">Legal & Policies</h2>
-                        </div>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="terms.html" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-orange);"></i>
-                                    Terms of Service
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="privacy.html" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-orange);"></i>
-                                    Privacy Policy
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="cookies.html" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-orange);"></i>
-                                    Cookie Policy
-                                </a>
-                            </li>
-                            <li style="margin-bottom: 0.8rem;">
-                                <a href="sitemap.html" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
-                                    <i class="fas fa-chevron-right" style="font-size: 0.8rem; color: var(--accent-orange);"></i>
-                                    Sitemap
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div style="background: var(--primary-dark); border: 1px solid var(--accent-blue); border-radius: var(--border-radius); padding: 2rem; margin-top: 3rem; text-align: center;">
-                    <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1.5rem;">Quick Navigation</h3>
-                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                        <a href="/" style="display: inline-block; padding: 0.8rem 1.5rem; background: var(--gradient-accent); color: white; text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
-                            <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
-                            Home
+                    <div class="links-list">
+                        <a href="/" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-home" style="font-size: 0.9rem; color: var(--accent-blue); width: 16px;"></i>
+                            <span>Home Page</span>
                         </a>
-                        <a href="/#search" style="display: inline-block; padding: 0.8rem 1.5rem; background: var(--background-glass); border: 1px solid var(--accent-cyan); color: var(--accent-cyan); text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
-                            <i class="fas fa-search" style="margin-right: 0.5rem;"></i>
-                            Search News
+                        <a href="about.html" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-info-circle" style="font-size: 0.9rem; color: var(--accent-blue); width: 16px;"></i>
+                            <span>About Us</span>
                         </a>
-                        <a href="contact.html" style="display: inline-block; padding: 0.8rem 1.5rem; background: var(--background-glass); border: 1px solid var(--accent-emerald); color: var(--accent-emerald); text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
-                            <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
-                            Contact
+                        <a href="careers.html" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-briefcase" style="font-size: 0.9rem; color: var(--accent-blue); width: 16px;"></i>
+                            <span>Careers</span>
+                        </a>
+                        <a href="contact.html" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-envelope" style="font-size: 0.9rem; color: var(--accent-blue); width: 16px;"></i>
+                            <span>Contact</span>
+                        </a>
+                        <a href="advertise.html" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; transition: var(--transition);">
+                            <i class="fas fa-bullhorn" style="font-size: 0.9rem; color: var(--accent-blue); width: 16px;"></i>
+                            <span>Advertise with us</span>
                         </a>
                     </div>
                 </div>
 
-                <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
-                        Can't find what you're looking for? <a href="contact.html" style="color: var(--accent-blue); text-decoration: none;">Contact us</a> for assistance.
-                    </p>
-                    <a href="/" style="display: inline-block; padding: 1rem 2rem; background: var(--gradient-accent); color: white; text-decoration: none; border-radius: var(--border-radius); font-weight: 600; transition: var(--transition);">
-                        Back to Home
+                <!-- News Categories -->
+                <div class="apple-liquid-card sound-wave" style="padding: 2.5rem; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                        <div class="apple-ethereal" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-newspaper" style="font-size: 1.5rem; color: var(--accent-cyan);"></i>
+                        </div>
+                        <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">News Categories</h3>
+                    </div>
+                    <div class="links-list">
+                        <a href="/#general" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-bolt" style="font-size: 0.9rem; color: var(--accent-cyan); width: 16px;"></i>
+                            <span>Breaking News</span>
+                        </a>
+                        <a href="/#world" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-globe" style="font-size: 0.9rem; color: var(--accent-cyan); width: 16px;"></i>
+                            <span>World News</span>
+                        </a>
+                        <a href="/#politics" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-landmark" style="font-size: 0.9rem; color: var(--accent-cyan); width: 16px;"></i>
+                            <span>Politics</span>
+                        </a>
+                        <a href="/#business" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-chart-line" style="font-size: 0.9rem; color: var(--accent-cyan); width: 16px;"></i>
+                            <span>Business</span>
+                        </a>
+                        <a href="/#technology" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; transition: var(--transition);">
+                            <i class="fas fa-microchip" style="font-size: 0.9rem; color: var(--accent-cyan); width: 16px;"></i>
+                            <span>Technology</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Sections -->
+                <div class="apple-liquid-card sound-wave" style="padding: 2.5rem; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                        <div class="apple-prism" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-th-large" style="font-size: 1.5rem; color: var(--accent-emerald);"></i>
+                        </div>
+                        <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">Sections</h3>
+                    </div>
+                    <div class="links-list">
+                        <a href="/#sports" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-futbol" style="font-size: 0.9rem; color: var(--accent-emerald); width: 16px;"></i>
+                            <span>Sports</span>
+                        </a>
+                        <a href="/#entertainment" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-film" style="font-size: 0.9rem; color: var(--accent-emerald); width: 16px;"></i>
+                            <span>Entertainment</span>
+                        </a>
+                        <a href="/#science" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-flask" style="font-size: 0.9rem; color: var(--accent-emerald); width: 16px;"></i>
+                            <span>Science</span>
+                        </a>
+                        <a href="/#health" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-heartbeat" style="font-size: 0.9rem; color: var(--accent-emerald); width: 16px;"></i>
+                            <span>Health</span>
+                        </a>
+                        <a href="/#opinion" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; transition: var(--transition);">
+                            <i class="fas fa-comment" style="font-size: 0.9rem; color: var(--accent-emerald); width: 16px;"></i>
+                            <span>Opinion</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Legal Pages -->
+                <div class="apple-liquid-card sound-wave" style="padding: 2.5rem; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                        <div class="apple-iridescent" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-file-contract" style="font-size: 1.5rem; color: var(--accent-violet);"></i>
+                        </div>
+                        <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">Legal & Policies</h3>
+                    </div>
+                    <div class="links-list">
+                        <a href="terms.html" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-scroll" style="font-size: 0.9rem; color: var(--accent-violet); width: 16px;"></i>
+                            <span>Terms of Service</span>
+                        </a>
+                        <a href="privacy.html" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-shield-alt" style="font-size: 0.9rem; color: var(--accent-violet); width: 16px;"></i>
+                            <span>Privacy Policy</span>
+                        </a>
+                        <a href="cookies.html" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border-subtle); transition: var(--transition);">
+                            <i class="fas fa-cookie-bite" style="font-size: 0.9rem; color: var(--accent-violet); width: 16px;"></i>
+                            <span>Cookie Policy</span>
+                        </a>
+                        <a href="sitemap.html" class="nav-link" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 0; color: var(--text-secondary); text-decoration: none; transition: var(--transition);">
+                            <i class="fas fa-sitemap" style="font-size: 0.9rem; color: var(--accent-violet); width: 16px;"></i>
+                            <span>Sitemap</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="apple-liquid-card" style="padding: 3rem; margin-bottom: 3rem; text-align: center;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; justify-content: center;">
+                    <div class="apple-quantum" style="width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-compass" style="font-size: 1.2rem; color: var(--accent-blue);"></i>
+                    </div>
+                    <h3 style="color: var(--text-primary); font-size: 1.6rem; margin: 0;">Quick Navigation</h3>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <a href="/" class="apple-liquid-btn sound-bubble" style="padding: 1rem 2rem; font-size: 1rem;">
+                        <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+                        Home
+                    </a>
+                    <a href="/#general" class="apple-liquid-btn sound-bubble" style="padding: 1rem 2rem; font-size: 1rem;">
+                        <i class="fas fa-newspaper" style="margin-right: 0.5rem;"></i>
+                        Latest News
+                    </a>
+                    <a href="contact.html" class="apple-liquid-btn sound-bubble" style="padding: 1rem 2rem; font-size: 1rem;">
+                        <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+                        Contact
                     </a>
                 </div>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 2rem;">
+                    Can't find what you're looking for? <a href="contact.html" style="color: var(--accent-blue); text-decoration: none;">Contact us</a> for assistance.
+                </p>
+            </div>
+
+            <!-- Back to Home -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="/" class="apple-liquid-btn sound-bubble" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+                    <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+                    Back to Home
+                </a>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -328,20 +444,20 @@
         updateTime();
         setInterval(updateTime, 1000);
 
-        // Add hover effects to links
-        document.querySelectorAll('a').forEach(link => {
+        // Add hover effects to navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('mouseenter', function() {
-                if (this.style.color.includes('var(--text-secondary)')) {
-                    this.style.color = 'var(--accent-blue)';
-                }
+                this.style.transform = 'translateX(8px)';
+                this.style.backgroundColor = 'var(--background-glass)';
             });
             
             link.addEventListener('mouseleave', function() {
-                if (this.style.color.includes('var(--accent-blue)') && !this.getAttribute('href').startsWith('mailto:')) {
-                    this.style.color = 'var(--text-secondary)';
-                }
+                this.style.transform = 'translateX(0)';
+                this.style.backgroundColor = 'transparent';
             });
         });
     </script>
+    
+    <script src="apple-sound-system.js"></script>
 </body>
 </html>
