@@ -6645,6 +6645,8 @@ footer::before {
   align-items: center;
   margin: 20px 0 30px 0;
   padding: 0 10px;
+  gap: 16px;              /* space between groups */
+  flex-wrap: wrap;        /* allow natural wrapping on mid widths */
 }
 
 .country-controls,
@@ -6792,39 +6794,45 @@ footer::before {
 /* Mobile Responsiveness for Sort Controls */
 @media (max-width: 768px) {
   .news-controls {
-    justify-content: center;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;   /* stack groups vertically */
+    gap: 12px;
     margin: 15px 0 25px 0;
     padding: 0 5px;
   }
 
+  /* Turn groups into single-column blocks with label on top */
   .country-controls,
   .language-controls,
   .sort-controls {
-    gap: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 6px;
+    width: 100%;
   }
 
-  .control-label {
-    font-size: 0.8rem;
+  .country-controls .control-label,
+  .language-controls .control-label,
+  .sort-controls .control-label {
+    display: block;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin: 0 0 4px 2px;
   }
 
   .country-select,
-  .language-select {
-    padding: 6px 12px;
-    padding-right: 32px;
-    font-size: 0.8rem;
-    border-radius: 10px;
-    background-size: 14px;
-    background-position: right 6px center;
-    min-width: 110px;
-  }
-
+  .language-select,
   .sort-select {
-    padding: 6px 12px;
-    padding-right: 32px;
-    font-size: 0.8rem;
-    border-radius: 10px;
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    padding-right: 34px;
+    font-size: 0.95rem;
+    border-radius: 12px;
     background-size: 14px;
-    background-position: right 6px center;
+    background-position: right 8px center;
   }
 }
 
