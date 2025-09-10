@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>zyro.news - Future of Digital Journalism</title>
     <meta name="description" content="Stay informed with the latest global news from zyro.news - Your premier source for breaking news, technology, politics, and more." />
+    <meta name="keywords" content="news, breaking news, world news, politics, technology, business, sports, entertainment, science, health, global news, journalism" />
+    <meta name="author" content="zyro.news" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://zyro.news" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="zyro.news - Future of Digital Journalism" />
+    <meta property="og:description" content="Stay informed with the latest global news from zyro.news - Your premier source for breaking news, technology, politics, and more." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zyro.news" />
+    <meta property="og:image" content="https://zyro.news/assets/og-image.jpg" />
+    <meta property="og:site_name" content="zyro.news" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@apoorvdarshan" />
+    <meta name="twitter:creator" content="@apoorvdarshan" />
+    <meta name="twitter:title" content="zyro.news - Future of Digital Journalism" />
+    <meta name="twitter:description" content="Stay informed with the latest global news from zyro.news - Your premier source for breaking news, technology, politics, and more." />
+    <meta name="twitter:image" content="https://zyro.news/assets/twitter-image.jpg" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="msapplication-TileColor" content="#1a1a1a" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     
@@ -19,17 +48,69 @@
     
     <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1910432677832151" crossorigin="anonymous"></script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "zyro.news",
+      "url": "https://zyro.news",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zyro.news/assets/logo.png"
+      },
+      "description": "Stay informed with the latest global news from zyro.news - Your premier source for breaking news, technology, politics, and more.",
+      "foundingDate": "2025",
+      "sameAs": [
+        "https://github.com/apoorvdarshan",
+        "https://linkedin.com/in/apoorvdarshan",
+        "https://youtube.com/@apoorvdarshan",
+        "https://instagram.com/apoorvdarshan",
+        "https://twitter.com/apoorvdarshan"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "editorial",
+        "email": "ad13dtu@gmail.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://zyro.news"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "zyro.news",
+      "url": "https://zyro.news",
+      "description": "Future of Digital Journalism",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://zyro.news/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "zyro.news",
+        "url": "https://zyro.news"
+      }
+    }
+    </script>
   </head>
   
   <body>
     <!-- Modern Header -->
-    <header>
+    <header role="banner" itemscope itemtype="https://schema.org/WPHeader">
       <div class="container">
         <div class="header-content">
-          <div class="logo">
-            <h1><a href="/" style="color: inherit; text-decoration: none;">zyro.news</a></h1>
+          <div class="logo" itemscope itemtype="https://schema.org/Organization">
+            <h1 itemprop="name"><a href="/" style="color: inherit; text-decoration: none;" itemprop="url">zyro.news</a></h1>
           </div>
-          <nav class="header-nav">
+          <nav class="header-nav" role="navigation" aria-label="Main navigation">
             <div class="nav-time" id="currentTime"></div>
           </nav>
         </div>
@@ -37,36 +118,36 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" role="banner" itemscope itemtype="https://schema.org/WPHeader">
       <div class="container">
         <div class="hero-content">
-          <h1>The Future of News</h1>
-          <p>Real-time global journalism powered by advanced technology and human insight</p>
+          <h1 itemprop="headline">The Future of News</h1>
+          <p itemprop="description">Real-time global journalism powered by advanced technology and human insight</p>
         </div>
       </div>
     </section>
 
     <!-- Advanced Search -->
-    <section class="search-section">
+    <section class="search-section" role="search" aria-label="News search">
       <div class="container">
         <div class="search-container">
           <div class="search-wrapper">
             <div class="search-icon">
               <i class="fas fa-search"></i>
             </div>
-            <input type="text" id="searchInput" class="apple-liquid-input" placeholder="Search breaking news, topics, or keywords..." />
-            <button id="searchBtn" class="apple-liquid-btn sound-bubble">Search</button>
+            <input type="text" id="searchInput" class="apple-liquid-input" placeholder="Search breaking news, topics, or keywords..." aria-label="Search news articles" />
+            <button id="searchBtn" class="apple-liquid-btn sound-bubble" type="button">Search</button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Categories Tiles -->
-    <section class="categories-section">
+    <section class="categories-section" itemscope itemtype="https://schema.org/ItemList">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">News Categories</h2>
-          <p class="section-subtitle">Explore news by topic</p>
+          <h2 class="section-title" itemprop="name">News Categories</h2>
+          <p class="section-subtitle" itemprop="description">Explore news by topic</p>
         </div>
         <div class="categories-grid">
           <div class="category-tile active apple-liquid-card sound-wave" data-category="general">
@@ -106,11 +187,11 @@
     </section>
 
     <!-- News Section -->
-    <section class="news-section">
+    <main class="news-section" role="main" itemscope itemtype="https://schema.org/CollectionPage">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Latest Headlines</h2>
-          <p class="section-subtitle">Stay informed with breaking news from around the globe</p>
+          <h2 class="section-title" itemprop="name">Latest Headlines</h2>
+          <p class="section-subtitle" itemprop="description">Stay informed with breaking news from around the globe</p>
         </div>
         
         <!-- Sort Controls -->
@@ -146,7 +227,7 @@
         <div id="error" class="error hidden"></div>
         
         <!-- News Grid -->
-        <div id="newsContainer" class="news-grid"></div>
+        <div id="newsContainer" class="news-grid" itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList"></div>
         
         <!-- Pagination Controls -->
         <div id="paginationControls" class="pagination-controls" style="display: none;">
@@ -159,7 +240,7 @@
           </button>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- Premium Contact Section -->
     <section class="contact-section">
@@ -199,7 +280,7 @@
     </section>
 
     <!-- Premium Footer -->
-    <footer>
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">

@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Allow all crawlers access to CSS and JavaScript files
+Allow: /style.css
+Allow: /script.js
+Allow: /apple-sound-system.js
+
+# Allow access to images and media
+Allow: /images/
+Allow: /assets/
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Specify sitemap location
+Sitemap: https://zyro.news/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
