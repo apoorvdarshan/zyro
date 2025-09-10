@@ -5,7 +5,7 @@ class FuturisticNewsApp {
         this.currentQuery = '';
         this.currentPage = 1;
         this.totalPages = 1;
-        this.articlesPerPage = 100;
+        this.articlesPerPage = this.isMobile() ? 10 : 21;
         this.currentSortBy = 'publishedAt';
         this.currentCountry = '';
         this.currentLanguage = '';
@@ -685,6 +685,10 @@ class FuturisticNewsApp {
         if (this.currentQuery) {
             this.performSearch();
         }
+    }
+
+    isMobile() {
+        return window.innerWidth <= 768;
     }
 }
 
