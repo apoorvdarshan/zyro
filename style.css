@@ -1760,6 +1760,181 @@ footer::before {
 
 /* Advanced Scroll Animations */
 
+/* Base class used by IntersectionObserver in script.js */
+.animate-in {
+  /* Disable animate-on-view: keep elements static and visible */
+  animation: none !important;
+  opacity: 1;
+  transform: none;
+}
+
+/* ================================================================
+   FUTURISTIC MINIMAL UPGRADE LAYER
+   Non‑destructive overrides that polish the existing design
+   while keeping it smooth, restrained, and performant.
+================================================================ */
+
+/* Palette refinements and accents */
+:root {
+  --neo-accent-1: #00e7ff;
+  --neo-accent-2: #3b82f6;
+  --neo-accent-3: #10b981;
+  --neo-surface: rgba(255,255,255,0.06);
+  --neo-surface-2: rgba(255,255,255,0.09);
+  --neo-glow: 0 0 0 1px rgba(255,255,255,0.06), 0 8px 40px rgba(0, 231, 255, 0.06);
+}
+
+/* Subtle aurora in hero for extra depth (minimal, non-intrusive) */
+.hero-section::after {
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(0, 231, 255, 0.08), transparent 70%),
+              radial-gradient(900px 420px at 80% 10%, rgba(59, 130, 246, 0.08), transparent 65%),
+              radial-gradient(1000px 520px at 50% 0%, rgba(16, 185, 129, 0.06), transparent 60%);
+}
+
+/* Fluid typography tightening for large headings */
+.hero-content h1,
+.section-title {
+  letter-spacing: -0.01em;
+  text-shadow: 0 0 1px rgba(0,0,0,0.15);
+}
+
+/* Search: cleaner focus ring and subtle lift */
+.search-wrapper {
+  background: linear-gradient(180deg, var(--neo-surface), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--neo-glow);
+}
+
+.search-wrapper:focus-within {
+  border-color: rgba(0, 231, 255, 0.35);
+  box-shadow: 0 0 0 1px rgba(0, 231, 255, 0.25), 0 18px 60px rgba(0, 231, 255, 0.08);
+}
+
+/* Category tiles: gradient ring + restrained hover */
+.category-tile {
+  background: linear-gradient(180deg, var(--neo-surface), rgba(255,255,255,0.03)) padding-box,
+              linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.04)) border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.category-tile:hover,
+.category-tile.active {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08), 0 18px 40px rgba(0,0,0,0.25), 0 0 0 1px rgba(0, 231, 255, 0.25);
+  border-image: linear-gradient(135deg, var(--neo-accent-1), var(--neo-accent-2)) 1;
+}
+
+/* News cards: minimal gradient edge + softened hover */
+.news-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)) padding-box,
+              linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06)) border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+  transition: transform 300ms cubic-bezier(.2,.7,.2,1), box-shadow 300ms ease;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08), 0 22px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(0, 231, 255, 0.16);
+}
+
+/* Buttons: sleeker neon edge, no heavy glow */
+.apple-liquid-btn,
+.pagination-btn {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)) padding-box,
+              linear-gradient(135deg, var(--neo-accent-2), var(--neo-accent-1)) border-box;
+  border: 1px solid transparent;
+  color: #eafaff;
+  text-shadow: 0 0 1px rgba(0,0,0,0.25);
+}
+
+.apple-liquid-btn:hover,
+.pagination-btn:hover:not(:disabled) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08), 0 16px 48px rgba(0,231,255,0.12);
+}
+
+/* Header time pill: cleaner glass */
+.nav-time {
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Enable container queries for the news grid to keep things tight */
+.news-grid { container-type: inline-size; }
+@container (max-width: 880px) {
+  .news-grid { gap: 1.25rem; }
+  .news-card { border-radius: 18px; }
+}
+@container (max-width: 560px) {
+  .news-grid { grid-template-columns: 1fr; }
+}
+
+/* Motion safety: keep it smooth for sensitive users */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .animate-in { opacity: 1; transform: none; }
+}
+
+/* ================================================================
+   FUTURISTIC MINIMAL UPGRADE – FINAL OVERRIDES (end of file)
+   Ensures upgraded aesthetics win the cascade.
+================================================================ */
+:root {
+  --neo-accent-1: #00e7ff;
+  --neo-accent-2: #3b82f6;
+  --neo-accent-3: #10b981;
+}
+
+.hero-section::after {
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(0, 231, 255, 0.08), transparent 70%),
+              radial-gradient(900px 420px at 80% 10%, rgba(59, 130, 246, 0.08), transparent 65%),
+              radial-gradient(1000px 520px at 50% 0%, rgba(16, 185, 129, 0.06), transparent 60%);
+}
+
+.search-wrapper {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)) padding-box,
+              linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06)) border-box;
+  border: 1px solid transparent;
+}
+
+.search-wrapper:focus-within {
+  border-image: linear-gradient(135deg, var(--neo-accent-1), var(--neo-accent-2)) 1;
+  box-shadow: 0 0 0 1px rgba(0, 231, 255, 0.25), 0 18px 60px rgba(0, 231, 255, 0.08);
+}
+
+.category-tile {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)) padding-box,
+              linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06)) border-box;
+  border: 1px solid transparent;
+}
+
+.category-tile:hover,
+.category-tile.active {
+  border-image: linear-gradient(135deg, var(--neo-accent-1), var(--neo-accent-2)) 1;
+}
+
+.news-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)) padding-box,
+              linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06)) border-box;
+  border: 1px solid transparent;
+}
+
+.news-card:hover {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08), 0 22px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(0, 231, 255, 0.16);
+}
+
+.apple-liquid-btn,
+.pagination-btn {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)) padding-box,
+              linear-gradient(135deg, var(--neo-accent-2), var(--neo-accent-1)) border-box;
+  border: 1px solid transparent;
+}
+
+.apple-liquid-btn:hover,
+.pagination-btn:hover:not(:disabled) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08), 0 16px 48px rgba(0,231,255,0.12);
+}
+
 .animate-fade {
   animation: fadeIn 1s ease-out forwards;
 }
