@@ -369,6 +369,22 @@ header.scrolled::before {
   transition: var(--transition-normal);
 }
 
+/* Align icon + brand name cleanly in header */
+.logo h1 a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  object-fit: cover;
+  display: inline-block;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08);
+}
+
 .logo h1::before {
   content: "";
   position: absolute;
