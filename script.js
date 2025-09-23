@@ -697,32 +697,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const app = new FuturisticNewsApp();
 
     // Newsletter subscription
-    const newsletterForm = document.querySelector('.newsletter');
-    if (newsletterForm) {
-        const input = newsletterForm.querySelector('input');
-        const button = newsletterForm.querySelector('button');
-        
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            const email = input.value.trim();
-            
-            if (email && email.includes('@')) {
-                button.textContent = 'Subscribed!';
-                button.style.background = 'var(--accent-emerald)';
-                input.value = '';
-                
-                setTimeout(() => {
-                    button.textContent = 'Subscribe';
-                    button.style.background = 'var(--gradient-accent)';
-                }, 3000);
-            } else {
-                input.style.borderColor = 'var(--accent-red)';
-                setTimeout(() => {
-                    input.style.borderColor = 'var(--border-subtle)';
-                }, 2000);
-            }
-        });
-    }
+    // Newsletter signup handled globally in newsletter-placeholder.js
 
     // Smooth scrolling for footer links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
