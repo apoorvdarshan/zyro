@@ -55,23 +55,6 @@
                 gap: 1.5rem !important;
             }
             
-            /* Contact form mobile */
-            .contact-form {
-                grid-template-columns: 1fr !important;
-                gap: 1rem !important;
-            }
-            
-            /* Form inputs mobile */
-            .form-group input,
-            .form-group textarea {
-                padding: 0.875rem !important;
-                font-size: 1rem !important;
-            }
-            
-            .form-group textarea {
-                min-height: 120px !important;
-            }
-            
             /* Icon sizes mobile */
             .apple-quantum, .apple-ethereal, .apple-prism, .apple-iridescent {
                 width: 60px !important;
@@ -120,13 +103,6 @@
             
             .hero-content h1 {
                 font-size: 1.75rem !important;
-            }
-            
-            /* Form inputs smaller screens */
-            .form-group input,
-            .form-group textarea {
-                padding: 0.75rem !important;
-                font-size: 0.95rem !important;
             }
             
             /* Icon sizes smaller */
@@ -228,45 +204,6 @@
                 </div>
             </div>
 
-            <!-- Contact Form -->
-            <div class="apple-liquid-card" style="padding: 3rem; margin-bottom: 3rem;">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; justify-content: center;">
-                    <div class="apple-iridescent" style="width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-comments" style="font-size: 1.5rem; color: var(--accent-emerald);"></i>
-                    </div>
-                    <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0;">Send us a Message</h3>
-                </div>
-                
-                <form class="contact-form" style="display: grid; gap: 2rem;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                        <div>
-                            <label style="display: block; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 600; font-size: 0.95rem;">Name *</label>
-                            <input type="text" required class="apple-liquid-input" style="width: 100%; padding: 1.25rem; font-size: 1rem;" placeholder="Your full name">
-                        </div>
-                        <div>
-                            <label style="display: block; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 600; font-size: 0.95rem;">Email *</label>
-                            <input type="email" required class="apple-liquid-input" style="width: 100%; padding: 1.25rem; font-size: 1rem;" placeholder="your.email@example.com">
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label style="display: block; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 600; font-size: 0.95rem;">Subject *</label>
-                        <input type="text" required class="apple-liquid-input" style="width: 100%; padding: 1.25rem; font-size: 1rem;" placeholder="What's this about?">
-                    </div>
-                    
-                    <div>
-                        <label style="display: block; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 600; font-size: 0.95rem;">Message *</label>
-                        <textarea rows="6" required class="apple-liquid-input" style="width: 100%; padding: 1.25rem; font-size: 1rem; font-family: inherit; resize: vertical; line-height: 1.6;" placeholder="Tell us more about your inquiry..."></textarea>
-                    </div>
-                    
-                    <div style="text-align: center;">
-                        <button type="submit" class="apple-liquid-btn sound-bubble" style="padding: 1.25rem 3rem; font-size: 1.1rem; font-weight: 600;">
-                            <i class="fas fa-paper-plane" style="margin-right: 0.75rem;"></i>
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-            </div>
 
             <!-- CTA Section -->
             <div style="text-align: center; margin: 2rem 0;">
@@ -274,6 +211,7 @@
                     <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
                     Back to Home
                 </a>
+            </div>
         </div>
     </main>
 
@@ -376,29 +314,5 @@
     </script>
     
     <script src="apple-sound-system.js"></script>
-    <script>
-        // Contact form handling
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const button = this.querySelector('button');
-            const originalText = button.textContent;
-            
-            button.textContent = 'Sending...';
-            button.disabled = true;
-            
-            // Simulate form submission
-            setTimeout(() => {
-                button.textContent = 'Message Sent!';
-                button.style.background = 'var(--accent-emerald)';
-                
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.disabled = false;
-                    button.style.background = 'var(--gradient-accent)';
-                    this.reset();
-                }, 3000);
-            }, 1500);
-        });
-    </script>
 </body>
 </html>
