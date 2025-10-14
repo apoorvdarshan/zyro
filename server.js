@@ -5,8 +5,15 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const GNEWS_API_KEY = process.env.GNEWS_API_KEY || '397c946c05975bae8c2b263be7a03b04';
+const GNEWS_API_KEY = process.env.GNEWS_API_KEY;
 const GNEWS_BASE_URL = 'https://gnews.io/api/v4';
+
+// Validate API key on startup
+if (!GNEWS_API_KEY) {
+    console.error('❌ GNEWS_API_KEY is not set in environment variables');
+    console.error('Please create a .env file with GNEWS_API_KEY=your_api_key');
+    process.exit(1);
+}
 
 app.use(cors());
 app.use(express.json());
