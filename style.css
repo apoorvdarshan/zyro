@@ -958,19 +958,6 @@ header.scrolled::before {
   height: fit-content;
 }
 
-.news-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gradient-rainbow);
-  transform: scaleX(0);
-  transition: var(--transition-elastic);
-  transform-origin: left;
-}
-
 .news-card::after {
   content: "";
   position: absolute;
@@ -983,11 +970,6 @@ header.scrolled::before {
   z-index: -1;
   opacity: 0;
   transition: var(--transition-normal);
-}
-
-.news-card:hover::before {
-  transform: scaleX(1);
-  animation: rainbowShift 2s ease-in-out infinite;
 }
 
 .news-card:hover::after {
